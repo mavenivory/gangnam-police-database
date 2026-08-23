@@ -6,47 +6,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gangnam Police Department - Investigation System</title>
-
+<title>Gangnam Police Department | Investigation System</title>
 
 <style>
 
 *{
-    box-sizing:border-box;
+box-sizing:border-box;
 }
-
 
 body{
 
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0f172a;
-    color:white;
+margin:0;
+font-family:'Segoe UI',Arial,sans-serif;
+background:#0b1120;
+color:white;
 
 }
 
 
 .header{
 
-    background:#111827;
-    padding:25px 40px;
-    border-bottom:3px solid #dc2626;
+background:
+linear-gradient(135deg,#111827,#020617);
+
+padding:35px 45px;
+
+border-bottom:4px solid #dc2626;
 
 }
 
 
 .header h1{
 
-    margin:0;
-    font-size:28px;
+font-size:32px;
+margin:0;
 
 }
 
 
 .header p{
 
-    margin-top:8px;
-    color:#cbd5e1;
+color:#cbd5e1;
+
+}
+
+
+.badge{
+
+display:inline-block;
+
+background:#991b1b;
+
+padding:8px 18px;
+
+border-radius:20px;
+
+font-size:13px;
+
+margin-top:10px;
+
+}
+
+
+
+.nav{
+
+background:#020617;
+
+padding:15px 40px;
+
+display:flex;
+
+gap:25px;
+
+}
+
+
+.nav a{
+
+color:#93c5fd;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+
+.nav a:hover{
+
+color:white;
 
 }
 
@@ -54,29 +103,7 @@ body{
 
 .container{
 
-    padding:30px;
-
-}
-
-
-
-.badge{
-
-    background:#991b1b;
-    padding:6px 15px;
-    border-radius:20px;
-    font-size:13px;
-
-}
-
-
-
-.grid{
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin-top:25px;
+padding:35px;
 
 }
 
@@ -84,10 +111,15 @@ body{
 
 .card{
 
-    background:#1e293b;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
+background:#1e293b;
+
+padding:25px;
+
+border-radius:14px;
+
+margin-bottom:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
 
 }
 
@@ -95,26 +127,56 @@ body{
 
 .card h2{
 
-    margin-top:0;
-    color:#fbbf24;
+color:#fbbf24;
+
+margin-top:0;
 
 }
 
 
 
-.stat{
+.grid{
 
-    font-size:32px;
-    font-weight:bold;
-    color:#38bdf8;
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
 
 }
 
 
 
-.section{
+.stat-card{
 
-    margin-top:30px;
+background:#1e293b;
+
+padding:25px;
+
+border-radius:12px;
+
+text-align:center;
+
+}
+
+
+
+.number{
+
+font-size:40px;
+
+font-weight:bold;
+
+color:#38bdf8;
+
+}
+
+
+
+.label{
+
+color:#cbd5e1;
 
 }
 
@@ -122,17 +184,20 @@ body{
 
 table{
 
-    width:100%;
-    border-collapse:collapse;
+width:100%;
+
+border-collapse:collapse;
 
 }
 
 
-td,th{
+th,td{
 
-    padding:12px;
-    border-bottom:1px solid #475569;
-    text-align:left;
+padding:12px;
+
+border-bottom:1px solid #475569;
+
+text-align:left;
 
 }
 
@@ -140,15 +205,7 @@ td,th{
 
 a{
 
-    color:#60a5fa;
-    text-decoration:none;
-
-}
-
-
-a:hover{
-
-    text-decoration:underline;
+color:#60a5fa;
 
 }
 
@@ -156,23 +213,39 @@ a:hover{
 
 .timeline{
 
-    border-left:3px solid #dc2626;
-    padding-left:20px;
+border-left:3px solid #dc2626;
+
+padding-left:20px;
 
 }
+
 
 
 .event{
 
-    margin-bottom:20px;
+margin-bottom:25px;
 
 }
 
 
+
 .date{
 
-    color:#fbbf24;
-    font-weight:bold;
+color:#fbbf24;
+
+font-weight:bold;
+
+}
+
+
+
+.status{
+
+background:#166534;
+
+padding:5px 15px;
+
+border-radius:20px;
 
 }
 
@@ -180,23 +253,26 @@ a:hover{
 
 .footer{
 
-    margin-top:40px;
-    padding:20px;
-    text-align:center;
-    background:#020617;
-    color:#94a3b8;
+background:#020617;
+
+padding:20px;
+
+text-align:center;
+
+color:#94a3b8;
 
 }
 
 
-</style>
 
+</style>
 
 </head>
 
 
 
 <body>
+
 
 
 <div class="header">
@@ -209,11 +285,41 @@ a:hover{
 Major Crime Investigation Division
 </p>
 
+
 <span class="badge">
-CONFIDENTIAL INVESTIGATION DATABASE
+CONFIDENTIAL CASE MANAGEMENT SYSTEM
 </span>
 
+
 </div>
+
+
+
+<div class="nav">
+
+<a href="index.html">
+Dashboard
+</a>
+
+<a href="victims.html">
+Victims
+</a>
+
+<a href="evidence.html">
+Evidence
+</a>
+
+<a href="timeline.html">
+Timeline
+</a>
+
+<a href="documents.html">
+Documents
+</a>
+
+</div>
+
+
 
 
 
@@ -224,19 +330,38 @@ CONFIDENTIAL INVESTIGATION DATABASE
 <div class="card">
 
 <h2>
-Case Overview
+Case Profile
 </h2>
 
 
-<p><b>Case ID:</b> GPD-2016-INS-001</p>
+<p>
+<b>Case ID:</b> GPD-2016-INS-001
+</p>
 
-<p><b>Case Name:</b> The Grand Casino Murder</p>
 
-<p><b>Case Type:</b> Serial Murder Investigation</p>
+<p>
+<b>Case Name:</b> The Grand Casino Murder
+</p>
 
-<p><b>Status:</b> Closed</p>
 
-<p><b>Investigation Unit:</b> Gangnam Major Crime Investigation Unit</p>
+<p>
+<b>Case Classification:</b> Serial Murder Investigation
+</p>
+
+
+<p>
+<b>Investigation Unit:</b> Gangnam Major Crime Investigation Unit
+</p>
+
+
+<p>
+<b>Status:</b>
+
+<span class="status">
+CLOSED
+</span>
+
+</p>
 
 
 </div>
@@ -248,78 +373,96 @@ Case Overview
 <div class="grid">
 
 
-<div class="card">
+<div class="stat-card">
 
-<h2>Victims</h2>
-
-<div class="stat">
+<div class="number">
 5
 </div>
 
-<p>
-Confirmed victims
-</p>
+<div class="label">
+Confirmed Victims
+</div>
 
 </div>
 
 
 
-<div class="card">
+<div class="stat-card">
 
-<h2>Suspect</h2>
-
-<div class="stat">
+<div class="number">
 1
 </div>
 
-<p>
-Primary suspect identified
-</p>
+<div class="label">
+Primary Suspect
+</div>
 
 </div>
 
 
 
-<div class="card">
+<div class="stat-card">
 
-<h2>Evidence</h2>
-
-<div class="stat">
+<div class="number">
 3
 </div>
 
-<p>
-Recorded evidence items
-</p>
+<div class="label">
+Evidence Items
+</div>
 
 </div>
+
+
+
+<div class="stat-card">
+
+<div class="number">
+2
+</div>
+
+<div class="label">
+Case Documents
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
 
 
 
 <div class="card">
 
-<h2>Documents</h2>
+<h2>
+Investigation Summary
+</h2>
 
-<div class="stat">
-2
-</div>
 
 <p>
-Investigation files
+The investigation identified a repeated murder pattern involving victim selection, incapacitation, insulin injection, symbolic casino chips, and recurring evidence patterns.
 </p>
 
+
+<p>
+The case reconstruction and chronology records are available in the official investigation documents.
+</p>
+
+
 </div>
 
 
 
-</div>
 
 
 
 
-
-<div class="section card">
-
+<div class="card">
 
 <h2>
 Victim Records
@@ -328,15 +471,13 @@ Victim Records
 
 <table>
 
-
 <tr>
 
 <th>ID</th>
 <th>Name</th>
-<th>Date</th>
+<th>Incident Date</th>
 
 </tr>
-
 
 
 <tr>
@@ -374,9 +515,7 @@ Victim Records
 </tr>
 
 
-
 </table>
-
 
 </div>
 
@@ -386,26 +525,28 @@ Victim Records
 
 
 
-<div class="section card">
 
+<div class="card">
 
 <h2>
-Evidence Database
+Evidence Registry
 </h2>
 
 
 <ul>
 
 <li>
-🎰 Casino Chip - Signature evidence
+🎰 Casino Chip - Signature Evidence
 </li>
 
-<li>
-🎵 Portable MP3 Player - Recurring pattern evidence
-</li>
 
 <li>
-💉 Insulin Injection Evidence - Cause of death evidence
+🎵 Portable MP3 Player - Pattern Evidence
+</li>
+
+
+<li>
+💉 Insulin Injection Evidence - Cause Related Evidence
 </li>
 
 
@@ -420,8 +561,7 @@ Evidence Database
 
 
 
-<div class="section card">
-
+<div class="card">
 
 <h2>
 Investigation Timeline
@@ -456,7 +596,6 @@ Jeanne Jun case recorded.
 
 
 
-
 <div class="event">
 
 <div class="date">
@@ -466,7 +605,6 @@ Jeanne Jun case recorded.
 Julian Lee case recorded.
 
 </div>
-
 
 
 
@@ -494,18 +632,13 @@ Hunter case recorded.
 
 
 
-
 <div class="event">
 
 <div class="date">
 26 August 2016
 </div>
 
-Suspect surrendered and investigation closed.
-
-</div>
-
-
+Investigation closed after suspect surrender.
 
 </div>
 
@@ -513,6 +646,7 @@ Suspect surrendered and investigation closed.
 </div>
 
 
+</div>
 
 
 
@@ -520,8 +654,8 @@ Suspect surrendered and investigation closed.
 
 
 
-<div class="section card">
 
+<div class="card">
 
 <h2>
 Document Archive
@@ -530,11 +664,15 @@ Document Archive
 
 <table>
 
-
 <tr>
 
-<th>Document</th>
-<th>Access</th>
+<th>
+Document
+</th>
+
+<th>
+Access
+</th>
 
 </tr>
 
@@ -549,7 +687,7 @@ Document Archive
 <td>
 
 <a href="280816_BAB%20IV.pdf">
-Open Document
+OPEN
 </a>
 
 </td>
@@ -568,7 +706,7 @@ Open Document
 <td>
 
 <a href="280816_BAB%20V.pdf">
-Open Document
+OPEN
 </a>
 
 </td>
@@ -580,7 +718,6 @@ Open Document
 </table>
 
 
-
 </div>
 
 
@@ -588,16 +725,17 @@ Open Document
 
 
 
-<div class="section card">
 
+
+<div class="card">
 
 <h2>
 Database Access
-
 </h2>
 
 
 <ul>
+
 
 <li>
 <a href="data/cases.json">
@@ -642,14 +780,17 @@ Timeline Database
 
 
 
+
 </div>
 
 
 
 <div class="footer">
 
-Gangnam Police Department © 2016  
+Gangnam Police Department © 2016
+
 <br>
+
 Digital Investigation Management System
 
 </div>
