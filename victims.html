@@ -1,134 +1,588 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 
 <head>
 
-<title>Victim Database - The Grand Casino Murder</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Victim Database | The Grand Casino Murder</title>
+
+
 
 <style>
 
+
+*{
+box-sizing:border-box;
+}
+
+
+
 body{
-font-family:Arial;
-background:#0f172a;
+
+margin:0;
+
+font-family:'Segoe UI',Arial,sans-serif;
+
+background:#0b1120;
+
 color:white;
-padding:30px;
+
+padding:35px;
+
 }
 
-.card{
-background:#1e293b;
-padding:20px;
-margin:15px 0;
-border-radius:10px;
+
+
+
+
+.header{
+
+background:linear-gradient(135deg,#111827,#020617);
+
+padding:25px;
+
+border-bottom:3px solid #dc2626;
+
+border-radius:12px;
+
 }
 
-h1{
+
+
+
+
+.header h1{
+
+margin:0;
+
 color:#fbbf24;
+
+font-size:30px;
+
 }
+
+
+
+
+.header p{
+
+color:#cbd5e1;
+
+}
+
+
+
+
+
+.badge{
+
+display:inline-block;
+
+background:#166534;
+
+padding:6px 15px;
+
+border-radius:20px;
+
+font-size:13px;
+
+}
+
+
+
+
 
 .back{
+
+display:inline-block;
+
+margin-bottom:25px;
+
 color:#60a5fa;
+
+text-decoration:none;
+
+font-weight:bold;
+
 }
+
+
+
+
+
+.card{
+
+background:#1e293b;
+
+padding:25px;
+
+margin:25px 0;
+
+border-radius:12px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+transition:.3s;
+
+}
+
+
+
+
+
+.card:hover{
+
+transform:translateY(-3px);
+
+background:#263449;
+
+}
+
+
+
+
+
+.card h2{
+
+color:#fbbf24;
+
+margin-top:0;
+
+}
+
+
+
+
+
+.label{
+
+color:#94a3b8;
+
+}
+
+
+
+
+
+.value{
+
+color:#e2e8f0;
+
+}
+
+
+
+
+
+.status{
+
+display:inline-block;
+
+background:#991b1b;
+
+padding:5px 15px;
+
+border-radius:20px;
+
+font-size:13px;
+
+}
+
+
+
+
+
+.footer{
+
+margin-top:40px;
+
+background:#020617;
+
+padding:20px;
+
+text-align:center;
+
+color:#94a3b8;
+
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:768px){
+
+
+body{
+
+padding:15px;
+
+}
+
+
+
+.header{
+
+padding:20px;
+
+}
+
+
+
+.header h1{
+
+font-size:24px;
+
+}
+
+
+
+.card{
+
+padding:18px;
+
+margin:15px 0;
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:400px){
+
+
+.header h1{
+
+font-size:20px;
+
+}
+
+
+
+.card h2{
+
+font-size:18px;
+
+}
+
+
+
+.badge{
+
+font-size:11px;
+
+}
+
+
+}
+
+
 
 </style>
 
+
 </head>
+
+
+
 
 
 <body>
 
 
-<h1>
-Victim Database
-</h1>
+
 
 <a class="back" href="index.html">
+
 ← Back to Dashboard
+
 </a>
 
 
-<div class="card">
 
-<h2>VIC-001 - Rico</h2>
+
+
+
+
+
+<div class="header">
+
+
+<h1>
+👤 Victim Database
+</h1>
+
 
 <p>
-Incident Date: 25 January 2016
+Case: <b>The Grand Casino Murder</b>
 </p>
 
-<p>
-Cause:
-Insulin intoxication
-</p>
+
+<span class="badge">
+VICTIM RECORD DATABASE
+</span>
+
 
 </div>
 
 
+
+
+
+
+
+
+
 <div class="card">
 
-<h2>VIC-002 - Jeanne Jun</h2>
 
-<p>
-Incident Date: 5 February 2016
+<h2>
+VIC-001 | Rico
+</h2>
+
+
+<p class="label">
+Incident Date
 </p>
 
-<p>
-Cause:
+
+<p class="value">
+25 January 2016
+</p>
+
+
+
+<p class="label">
+Cause of Death
+</p>
+
+
+<p class="value">
+Insulin intoxication
+</p>
+
+
+<span class="status">
+CONFIRMED VICTIM
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+VIC-002 | Jeanne Jun
+</h2>
+
+
+<p class="label">
+Incident Date
+</p>
+
+
+<p class="value">
+5 February 2016
+</p>
+
+
+
+<p class="label">
+Cause of Death
+</p>
+
+
+<p class="value">
 Insulin injection complication
 </p>
 
+
+<span class="status">
+CONFIRMED VICTIM
+</span>
+
+
 </div>
+
+
+
+
+
+
 
 
 
 <div class="card">
 
-<h2>VIC-003 - Julian Lee</h2>
 
-<p>
-Incident Date: 25 April 2016
+<h2>
+VIC-003 | Julian Lee
+</h2>
+
+
+<p class="label">
+Incident Date
 </p>
 
-<p>
-Cause:
+
+<p class="value">
+25 April 2016
+</p>
+
+
+
+<p class="label">
+Cause of Death
+</p>
+
+
+<p class="value">
 Insulin intoxication
 </p>
 
+
+<span class="status">
+CONFIRMED VICTIM
+</span>
+
+
 </div>
+
+
+
+
+
+
 
 
 
 <div class="card">
 
-<h2>VIC-004 - Jayden Lee</h2>
 
-<p>
-Incident Date: 5 May 2016
+<h2>
+VIC-004 | Jayden Lee
+</h2>
+
+
+<p class="label">
+Incident Date
 </p>
 
-<p>
-Cause:
+
+<p class="value">
+5 May 2016
+</p>
+
+
+
+<p class="label">
+Cause of Death
+</p>
+
+
+<p class="value">
 Insulin intoxication
 </p>
 
+
+<span class="status">
+CONFIRMED VICTIM
+</span>
+
+
 </div>
+
+
+
+
+
+
 
 
 
 <div class="card">
 
-<h2>VIC-005 - Hunter</h2>
 
-<p>
-Incident Date: 15 July 2016
+<h2>
+VIC-005 | Hunter
+</h2>
+
+
+<p class="label">
+Incident Date
 </p>
 
-<p>
-Cause:
+
+<p class="value">
+15 July 2016
+</p>
+
+
+
+<p class="label">
+Cause of Death
+</p>
+
+
+<p class="value">
 Insulin intoxication
 </p>
 
+
+<span class="status">
+CONFIRMED VICTIM
+</span>
+
+
 </div>
+
+
+
+
+
+
+
+
+<div class="footer">
+
+
+Gangnam Police Department © 2016
+
+<br>
+
+Digital Investigation Management System
+
+
+</div>
+
+
+
+
 
 
 </body>
+
 
 </html>
