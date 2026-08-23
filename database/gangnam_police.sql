@@ -30,7 +30,7 @@ CREATE TABLE cases (
 INSERT INTO cases VALUES (
 
 'GPD-2016-INS-001',
-'Gangnam Insulin Serial Murder Case',
+'The Grand Casino Murder',
 'Gangnam Major Crime Investigation Unit',
 'Serial Murder',
 'Closed',
