@@ -1,6 +1,9 @@
 {
-    "case_id": "GPD-2016-INS-001",
-    "case_name": "Gangnam Insulin Serial Murder Case",
-    "status": "Closed",
-    "department": "Gangnam Major Crime Investigation Unit"
+  "case_id": "GPD-2016-INS-001",
+  "case_name": "The Grand Casino Murder",
+  "department": "Gangnam Major Crime Investigation Unit",
+  "case_type": "Serial Murder",
+  "status": "Closed",
+  "opening_date": "2016-01-25",
+  "closing_date": "2016-08-26"
 }
