@@ -1,0 +1,32 @@
+[
+  {
+    "victim_id": "VIC-001",
+    "name": "Rico",
+    "incident_date": "2016-01-25",
+    "cause_of_death": "Insulin intoxication"
+  },
+  {
+    "victim_id": "VIC-002",
+    "name": "Jeanne Jun",
+    "incident_date": "2016-02-05",
+    "cause_of_death": "Insulin injection complication"
+  },
+  {
+    "victim_id": "VIC-003",
+    "name": "Julian Lee",
+    "incident_date": "2016-04-25",
+    "cause_of_death": "Insulin intoxication"
+  },
+  {
+    "victim_id": "VIC-004",
+    "name": "Jayden Lee",
+    "incident_date": "2016-05-05",
+    "cause_of_death": "Insulin intoxication"
+  },
+  {
+    "victim_id": "VIC-005",
+    "name": "Hunter",
+    "incident_date": "2016-07-15",
+    "cause_of_death": "Insulin intoxication"
+  }
+]
