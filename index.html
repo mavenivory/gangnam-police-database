@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gangnam Police Department - Investigation System</title>
+
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0f172a;
+    color:white;
+
+}
+
+
+.header{
+
+    background:#111827;
+    padding:25px 40px;
+    border-bottom:3px solid #dc2626;
+
+}
+
+
+.header h1{
+
+    margin:0;
+    font-size:28px;
+
+}
+
+
+.header p{
+
+    margin-top:8px;
+    color:#cbd5e1;
+
+}
+
+
+
+.container{
+
+    padding:30px;
+
+}
+
+
+
+.badge{
+
+    background:#991b1b;
+    padding:6px 15px;
+    border-radius:20px;
+    font-size:13px;
+
+}
+
+
+
+.grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:25px;
+
+}
+
+
+
+.card{
+
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+}
+
+
+
+.card h2{
+
+    margin-top:0;
+    color:#fbbf24;
+
+}
+
+
+
+.stat{
+
+    font-size:32px;
+    font-weight:bold;
+    color:#38bdf8;
+
+}
+
+
+
+.section{
+
+    margin-top:30px;
+
+}
+
+
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+
+td,th{
+
+    padding:12px;
+    border-bottom:1px solid #475569;
+    text-align:left;
+
+}
+
+
+
+a{
+
+    color:#60a5fa;
+    text-decoration:none;
+
+}
+
+
+a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+
+.timeline{
+
+    border-left:3px solid #dc2626;
+    padding-left:20px;
+
+}
+
+
+.event{
+
+    margin-bottom:20px;
+
+}
+
+
+.date{
+
+    color:#fbbf24;
+    font-weight:bold;
+
+}
+
+
+
+.footer{
+
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    background:#020617;
+    color:#94a3b8;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="header">
+
+<h1>
+🚔 Gangnam Police Department
+</h1>
+
+<p>
+Major Crime Investigation Division
+</p>
+
+<span class="badge">
+CONFIDENTIAL INVESTIGATION DATABASE
+</span>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+<div class="card">
+
+<h2>
+Case Overview
+</h2>
+
+
+<p><b>Case ID:</b> GPD-2016-INS-001</p>
+
+<p><b>Case Name:</b> The Grand Casino Murder</p>
+
+<p><b>Case Type:</b> Serial Murder Investigation</p>
+
+<p><b>Status:</b> Closed</p>
+
+<p><b>Investigation Unit:</b> Gangnam Major Crime Investigation Unit</p>
+
+
+</div>
+
+
+
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<h2>Victims</h2>
+
+<div class="stat">
+5
+</div>
+
+<p>
+Confirmed victims
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Suspect</h2>
+
+<div class="stat">
+1
+</div>
+
+<p>
+Primary suspect identified
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Evidence</h2>
+
+<div class="stat">
+3
+</div>
+
+<p>
+Recorded evidence items
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Documents</h2>
+
+<div class="stat">
+2
+</div>
+
+<p>
+Investigation files
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="section card">
+
+
+<h2>
+Victim Records
+</h2>
+
+
+<table>
+
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Date</th>
+
+</tr>
+
+
+
+<tr>
+<td>VIC-001</td>
+<td>Rico</td>
+<td>25 January 2016</td>
+</tr>
+
+
+<tr>
+<td>VIC-002</td>
+<td>Jeanne Jun</td>
+<td>5 February 2016</td>
+</tr>
+
+
+<tr>
+<td>VIC-003</td>
+<td>Julian Lee</td>
+<td>25 April 2016</td>
+</tr>
+
+
+<tr>
+<td>VIC-004</td>
+<td>Jayden Lee</td>
+<td>5 May 2016</td>
+</tr>
+
+
+<tr>
+<td>VIC-005</td>
+<td>Hunter</td>
+<td>15 July 2016</td>
+</tr>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="section card">
+
+
+<h2>
+Evidence Database
+</h2>
+
+
+<ul>
+
+<li>
+🎰 Casino Chip - Signature evidence
+</li>
+
+<li>
+🎵 Portable MP3 Player - Recurring pattern evidence
+</li>
+
+<li>
+💉 Insulin Injection Evidence - Cause of death evidence
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="section card">
+
+
+<h2>
+Investigation Timeline
+</h2>
+
+
+
+<div class="timeline">
+
+
+<div class="event">
+
+<div class="date">
+25 January 2016
+</div>
+
+Rico case recorded.
+
+</div>
+
+
+
+<div class="event">
+
+<div class="date">
+5 February 2016
+</div>
+
+Jeanne Jun case recorded.
+
+</div>
+
+
+
+
+<div class="event">
+
+<div class="date">
+25 April 2016
+</div>
+
+Julian Lee case recorded.
+
+</div>
+
+
+
+
+<div class="event">
+
+<div class="date">
+5 May 2016
+</div>
+
+Jayden Lee case recorded.
+
+</div>
+
+
+
+<div class="event">
+
+<div class="date">
+15 July 2016
+</div>
+
+Hunter case recorded.
+
+</div>
+
+
+
+
+<div class="event">
+
+<div class="date">
+26 August 2016
+</div>
+
+Suspect surrendered and investigation closed.
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="section card">
+
+
+<h2>
+Document Archive
+</h2>
+
+
+<table>
+
+
+<tr>
+
+<th>Document</th>
+<th>Access</th>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+280816_BAB IV.pdf
+</td>
+
+<td>
+
+<a href="280816_BAB%20IV.pdf">
+Open Document
+</a>
+
+</td>
+
+
+</tr>
+
+
+
+<tr>
+
+<td>
+280816_BAB V.pdf
+</td>
+
+<td>
+
+<a href="280816_BAB%20V.pdf">
+Open Document
+</a>
+
+</td>
+
+
+</tr>
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="section card">
+
+
+<h2>
+Database Access
+
+</h2>
+
+
+<ul>
+
+<li>
+<a href="data/cases.json">
+Case Database
+</a>
+</li>
+
+
+<li>
+<a href="data/victims.json">
+Victim Database
+</a>
+</li>
+
+
+<li>
+<a href="data/suspects.json">
+Suspect Database
+</a>
+</li>
+
+
+<li>
+<a href="data/evidence.json">
+Evidence Database
+</a>
+</li>
+
+
+<li>
+<a href="data/timeline.json">
+Timeline Database
+</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+<div class="footer">
+
+Gangnam Police Department © 2016  
+<br>
+Digital Investigation Management System
+
+</div>
+
+
+
+</body>
+
+</html>
