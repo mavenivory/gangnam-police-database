@@ -1,0 +1,37 @@
+[
+  {
+    "timeline_id": "T-001",
+    "date": "2016-01-25",
+    "event": "Rico met the suspect after being invited to a meeting."
+  },
+  {
+    "timeline_id": "T-002",
+    "date": "2016-02-05",
+    "event": "Jeanne Jun became the second victim using the same method."
+  },
+  {
+    "timeline_id": "T-003",
+    "date": "2016-04-25",
+    "event": "Julian Lee became the third victim."
+  },
+  {
+    "timeline_id": "T-004",
+    "date": "2016-05-05",
+    "event": "Jayden Lee became the fourth victim."
+  },
+  {
+    "timeline_id": "T-005",
+    "date": "2016-07-15",
+    "event": "Hunter became the fifth victim."
+  },
+  {
+    "timeline_id": "T-006",
+    "date": "2016-08-25",
+    "event": "Suspect met a potential victim but decided not to continue the act."
+  },
+  {
+    "timeline_id": "T-007",
+    "date": "2016-08-26",
+    "event": "Suspect surrendered to authorities."
+  }
+]
