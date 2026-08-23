@@ -44,8 +44,6 @@ color:white;
 
 
 
-
-
 a{
 
 text-decoration:none;
@@ -58,15 +56,235 @@ color:inherit;
 
 
 
+
+/* =========================
+   SECURITY SCREEN
+========================= */
+
+
+#security-screen{
+
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+
+background:
+
+linear-gradient(
+135deg,
+#020617,
+#111827
+);
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+z-index:9999;
+
+
+}
+
+
+
+
+
+.security-box{
+
+
+width:430px;
+
+max-width:90%;
+
+
+background:#111827;
+
+
+padding:45px;
+
+
+border-radius:18px;
+
+
+border:1px solid #334155;
+
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.8);
+
+
+text-align:center;
+
+
+}
+
+
+
+
+
+.security-logo{
+
+
+font-size:65px;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.security-box h1{
+
+
+font-size:28px;
+
+
+color:#fbbf24;
+
+
+margin-bottom:10px;
+
+
+}
+
+
+
+.security-box h3{
+
+
+font-size:13px;
+
+
+letter-spacing:3px;
+
+
+color:#94a3b8;
+
+
+}
+
+
+
+.security-box p{
+
+
+margin:25px 0;
+
+
+color:#dc2626;
+
+
+font-weight:bold;
+
+
+}
+
+
+
+.security-box input{
+
+
+width:100%;
+
+
+padding:14px;
+
+
+background:#020617;
+
+
+border:1px solid #475569;
+
+
+border-radius:8px;
+
+
+color:white;
+
+
+font-size:15px;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.security-box button{
+
+
+width:100%;
+
+
+padding:14px;
+
+
+background:#1d4ed8;
+
+
+border:none;
+
+
+border-radius:8px;
+
+
+color:white;
+
+
+font-weight:bold;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+.security-box button:hover{
+
+
+background:#2563eb;
+
+
+}
+
+
+
+
+
+
+
+
+
 /* =========================
    HEADER
 ========================= */
+
 
 
 .header{
 
 
 background:
+
 
 linear-gradient(
 135deg,
@@ -83,7 +301,9 @@ border-bottom:3px solid #b91c1c;
 
 display:flex;
 
+
 align-items:center;
+
 
 gap:30px;
 
@@ -98,6 +318,7 @@ gap:30px;
 
 
 width:90px;
+
 
 height:90px;
 
@@ -141,29 +362,20 @@ font-size:34px;
 letter-spacing:2px;
 
 
-font-weight:700;
-
-
 }
-
-
 
 
 
 .header-content p{
 
 
-margin:10px 0;
-
-
 color:#cbd5e1;
 
 
-font-size:16px;
+margin:10px 0;
 
 
 }
-
 
 
 
@@ -198,8 +410,9 @@ letter-spacing:1px;
 
 
 
+
 /* =========================
-   NAVIGATION
+   NAVBAR
 ========================= */
 
 
@@ -212,18 +425,16 @@ background:#020617;
 padding:18px 70px;
 
 
-border-bottom:1px solid #1e293b;
-
-
 display:flex;
 
 
 gap:35px;
 
 
+border-bottom:1px solid #1e293b;
+
+
 }
-
-
 
 
 
@@ -234,9 +445,6 @@ color:#cbd5e1;
 
 
 font-weight:600;
-
-
-font-size:14px;
 
 
 }
@@ -250,7 +458,6 @@ color:#fbbf24;
 
 
 }
-
 
 
 
@@ -280,8 +487,6 @@ padding:50px 40px;
 
 
 
-
-
 /* =========================
    CASE PROFILE
 ========================= */
@@ -292,10 +497,11 @@ padding:50px 40px;
 
 background:
 
+
 linear-gradient(
 135deg,
-#111827,
-#172554
+#172554,
+#111827
 );
 
 
@@ -344,7 +550,19 @@ font-size:38px;
 margin:15px 0;
 
 
-color:#f8fafc;
+}
+
+
+
+
+
+.case-description{
+
+
+color:#cbd5e1;
+
+
+line-height:1.7;
 
 
 }
@@ -401,10 +619,10 @@ border:1px solid #1e293b;
 display:block;
 
 
+font-size:12px;
+
+
 color:#94a3b8;
-
-
-font-size:13px;
 
 
 margin-bottom:8px;
@@ -414,26 +632,16 @@ margin-bottom:8px;
 
 
 
-
-
 .info-box strong{
-
-
-font-size:18px;
 
 
 color:#fbbf24;
 
 
+font-size:18px;
+
+
 }
-
-
-
-
-
-
-
-
 /* =========================
    CONTENT CARD
 ========================= */
@@ -458,6 +666,7 @@ margin-bottom:30px;
 
 
 box-shadow:
+
 0 15px 40px rgba(0,0,0,.35);
 
 
@@ -466,21 +675,19 @@ box-shadow:
 
 
 
-
 .card h2{
 
 
-margin-top:0;
-
-
 color:#fbbf24;
+
+
+margin-top:0;
 
 
 font-size:24px;
 
 
 }
-
 
 
 
@@ -501,10 +708,8 @@ line-height:1.8;
 
 
 
-
-
 /* =========================
-   DOCUMENT CARD
+   DOCUMENT ACCESS
 ========================= */
 
 
@@ -549,7 +754,6 @@ transition:.3s;
 
 
 
-
 .document-card:hover{
 
 
@@ -583,6 +787,24 @@ font-size:45px;
 color:#fbbf24;
 
 
+font-size:22px;
+
+
+}
+
+
+
+
+
+.document-card p{
+
+
+color:#cbd5e1;
+
+
+line-height:1.7;
+
+
 }
 
 
@@ -593,9 +815,6 @@ color:#fbbf24;
 
 
 display:inline-block;
-
-
-margin-top:15px;
 
 
 background:#1d4ed8;
@@ -610,9 +829,10 @@ border-radius:8px;
 font-weight:bold;
 
 
+margin-top:15px;
+
+
 }
-
-
 
 
 
@@ -626,6 +846,42 @@ background:#2563eb;
 
 
 
+
+
+
+/* =========================
+   SECURITY NOTICE
+========================= */
+
+
+.notice{
+
+
+background:#111827;
+
+
+border-left:5px solid #fbbf24;
+
+
+padding:25px;
+
+
+border-radius:12px;
+
+
+}
+
+
+
+
+
+.notice h3{
+
+
+color:#fbbf24;
+
+
+}
 
 
 
@@ -659,13 +915,15 @@ margin-top:40px;
 
 
 
+
+
+
 /* =========================
    RESPONSIVE
 ========================= */
 
 
 @media(max-width:800px){
-
 
 
 .header{
@@ -739,19 +997,89 @@ grid-template-columns:1fr;
 }
 
 
+
 }
-
-
-
-</style>
-
+   </style>
 
 </head>
 <body>
 
 
+
 <!-- =========================
-     POLICE HEADER
+     SECURITY GATE
+========================= -->
+
+
+<div id="security-screen">
+
+
+<div class="security-box">
+
+
+<div class="security-logo">
+
+🚔
+
+</div>
+
+
+
+<h1>
+
+Gangnam Police Department
+
+</h1>
+
+
+
+<h3>
+
+SECURE CASE ARCHIVE TERMINAL
+
+</h3>
+
+
+
+<p id="security-message">
+
+LAYER 1 AUTHENTICATION REQUIRED
+
+</p>
+
+
+
+<input 
+type="password"
+id="password-input"
+placeholder="Enter Authorization Password"
+>
+
+
+
+<button onclick="authenticate()">
+
+ACCESS SYSTEM
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     HEADER
 ========================= -->
 
 
@@ -771,13 +1099,17 @@ grid-template-columns:1fr;
 
 
 <h1>
+
 Gangnam Police Department
+
 </h1>
 
 
 
 <p>
+
 Major Crime Investigation Division
+
 </p>
 
 
@@ -789,8 +1121,8 @@ CONFIDENTIAL CASE ARCHIVE
 </span>
 
 
-</div>
 
+</div>
 
 
 </header>
@@ -801,8 +1133,10 @@ CONFIDENTIAL CASE ARCHIVE
 
 
 
+
+
 <!-- =========================
-     NAVIGATION
+     NAVBAR
 ========================= -->
 
 
@@ -814,6 +1148,7 @@ CONFIDENTIAL CASE ARCHIVE
 Home
 
 </a>
+
 
 
 
@@ -834,21 +1169,8 @@ Document Archive
 
 
 
-
-<!-- =========================
-     MAIN CONTENT
-========================= -->
-
-
 <div class="container">
-
-
-
-
-
-
-
-<!-- =========================
+   <!-- =========================
      CASE PROFILE
 ========================= -->
 
@@ -856,12 +1178,12 @@ Document Archive
 <section class="case-box">
 
 
-
 <div class="case-label">
 
 RESTRICTED CASE FILE
 
 </div>
+
 
 
 
@@ -876,9 +1198,11 @@ The Grand Casino Murder
 
 
 
-<p>
+<p class="case-description">
 
 Official investigation archive maintained by Gangnam Police Department Major Crime Investigation Division.
+
+This restricted portal provides access to authorized case information and official investigation documentation.
 
 </p>
 
@@ -888,7 +1212,6 @@ Official investigation archive maintained by Gangnam Police Department Major Cri
 
 
 <div class="case-info">
-
 
 
 
@@ -919,6 +1242,7 @@ GPD-2016-INS-001
 
 
 
+
 <div class="info-box">
 
 
@@ -931,12 +1255,13 @@ CASE STATUS
 
 <strong>
 
-CLOSED
+CLOSED CASE
 
 </strong>
 
 
 </div>
+
 
 
 
@@ -962,6 +1287,7 @@ SERIAL MURDER INVESTIGATION
 
 
 </div>
+
 
 
 
@@ -996,8 +1322,6 @@ CONFIDENTIAL
 
 
 
-
-
 </section>
 
 
@@ -1016,7 +1340,6 @@ CONFIDENTIAL
 <section class="card">
 
 
-
 <h2>
 
 Case Overview
@@ -1028,23 +1351,25 @@ Case Overview
 
 <p>
 
-The Grand Casino Murder investigation archive contains official records related to the criminal investigation conducted by the Gangnam Police Department.
+The Grand Casino Murder investigation archive contains official records related to a major criminal investigation conducted by the Gangnam Police Department Major Crime Investigation Division.
 
 </p>
 
 
 
+
 <p>
 
-This restricted portal provides access to verified case documentation containing investigation reconstruction and chronological case reporting.
+This secure archive provides access to verified investigation reports and official documentation regarding case reconstruction and chronological findings.
 
 </p>
 
 
 
+
 <p>
 
-Unauthorized access, distribution, or modification of archived materials is prohibited.
+All materials contained within this system are classified as confidential law enforcement records.
 
 </p>
 
@@ -1056,8 +1381,13 @@ Unauthorized access, distribution, or modification of archived materials is proh
 
 
 
+
+
+
+
+
 <!-- =========================
-     DOCUMENT ARCHIVE
+     DOCUMENT ACCESS
 ========================= -->
 
 
@@ -1075,7 +1405,7 @@ Official Case Documents
 
 <p>
 
-Access authorized investigation reports associated with The Grand Casino Murder case.
+Authorized access to investigation reports associated with The Grand Casino Murder case.
 
 </p>
 
@@ -1102,6 +1432,8 @@ Access authorized investigation reports associated with The Grand Casino Murder 
 
 
 
+
+
 <h3>
 
 280816_BAB IV.pdf
@@ -1110,15 +1442,22 @@ Access authorized investigation reports associated with The Grand Casino Murder 
 
 
 
+
 <p>
 
 Crime Reconstruction Report
 
-<br><br>
+</p>
 
-Contains investigation reconstruction and analysis of the criminal mechanism.
+
+
+
+<p>
+
+Contains reconstruction analysis of the investigation mechanism and official findings.
 
 </p>
+
 
 
 
@@ -1127,6 +1466,7 @@ Contains investigation reconstruction and analysis of the criminal mechanism.
 ACCESS DOCUMENT
 
 </a>
+
 
 
 
@@ -1151,6 +1491,8 @@ ACCESS DOCUMENT
 
 
 
+
+
 <h3>
 
 280816_BAB V.pdf
@@ -1159,15 +1501,22 @@ ACCESS DOCUMENT
 
 
 
+
 <p>
 
 Crime Chronology Report
 
-<br><br>
+</p>
 
-Contains chronological records and investigation sequence documentation.
+
+
+
+<p>
+
+Contains chronological documentation of incidents and investigation sequence.
 
 </p>
+
 
 
 
@@ -1179,21 +1528,19 @@ ACCESS DOCUMENT
 
 
 
-</div>
-
-
-
-
-
 
 </div>
+
+
+
+
+
+
+</div>
+
 
 
 </section>
-
-
-
-
 
 
 
@@ -1204,20 +1551,21 @@ ACCESS DOCUMENT
 ========================= -->
 
 
-<section class="card">
+<section class="notice">
 
 
-<h2>
+<h3>
 
-Security Notice
+⚠ Security Notice
 
-</h2>
+</h3>
+
 
 
 
 <p>
 
-This archive is an official digital record repository of Gangnam Police Department.
+This digital archive contains confidential investigation materials belonging to Gangnam Police Department.
 
 </p>
 
@@ -1225,21 +1573,14 @@ This archive is an official digital record repository of Gangnam Police Departme
 
 <p>
 
-All documents contained within this system are classified as confidential investigation materials.
-
-</p>
-
-
-
-<p>
-
-Access, reproduction, and distribution without authorization are strictly prohibited.
+Access is restricted to authorized personnel only. Unauthorized copying, modification, or distribution of case materials is strictly prohibited.
 
 </p>
 
 
 
 </section>
+
 
 
 
@@ -1286,7 +1627,134 @@ Confidential Case Archive System
 
 
 
-</body>
 
+<!-- =========================
+     SECURITY SCRIPT
+========================= -->
+
+
+<script>
+
+
+let securityLayer = 1;
+
+
+
+function authenticate(){
+
+
+
+let password = document.getElementById("password-input").value;
+
+
+let message = document.getElementById("security-message");
+
+
+
+
+
+
+if(
+securityLayer === 1 &&
+password === "superbia"
+){
+
+
+securityLayer = 2;
+
+
+message.innerHTML =
+"LAYER 2 AUTHENTICATION REQUIRED";
+
+
+document.getElementById("password-input").value="";
+
+
+return;
+
+
+}
+
+
+
+
+
+
+
+
+if(
+securityLayer === 2 &&
+password === "judecca"
+){
+
+
+securityLayer = 3;
+
+
+message.innerHTML =
+"LAYER 3 AUTHENTICATION REQUIRED";
+
+
+document.getElementById("password-input").value="";
+
+
+return;
+
+
+}
+
+
+
+
+
+
+
+
+if(
+securityLayer === 3 &&
+password === "lasciateognesperanza"
+){
+
+
+
+document.getElementById("security-screen").style.display="none";
+
+
+
+return;
+
+
+}
+
+
+
+
+
+
+
+
+message.innerHTML =
+"ACCESS DENIED - INVALID PASSWORD";
+
+
+
+document.getElementById("password-input").value="";
+
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
 
 </html>
