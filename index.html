@@ -8,11 +8,13 @@
 
 <title>Gangnam Police Department | Investigation System</title>
 
+
 <style>
 
 *{
 box-sizing:border-box;
 }
+
 
 body{
 
@@ -26,8 +28,7 @@ color:white;
 
 .header{
 
-background:
-linear-gradient(135deg,#111827,#020617);
+background:linear-gradient(135deg,#111827,#020617);
 
 padding:35px 45px;
 
@@ -82,6 +83,7 @@ gap:25px;
 }
 
 
+
 .nav a{
 
 color:#93c5fd;
@@ -91,6 +93,7 @@ text-decoration:none;
 font-weight:bold;
 
 }
+
 
 
 .nav a:hover{
@@ -139,8 +142,7 @@ margin-top:0;
 
 display:grid;
 
-grid-template-columns:
-repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
 gap:20px;
 
@@ -191,6 +193,7 @@ border-collapse:collapse;
 }
 
 
+
 th,td{
 
 padding:12px;
@@ -206,6 +209,16 @@ text-align:left;
 a{
 
 color:#60a5fa;
+
+text-decoration:none;
+
+}
+
+
+
+a:hover{
+
+text-decoration:underline;
 
 }
 
@@ -251,6 +264,120 @@ border-radius:20px;
 
 
 
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+
+.header{
+
+padding:25px 20px;
+
+}
+
+
+.header h1{
+
+font-size:24px;
+
+}
+
+
+.container{
+
+padding:15px;
+
+}
+
+
+.nav{
+
+flex-direction:column;
+
+padding:15px 20px;
+
+gap:12px;
+
+}
+
+
+.card{
+
+padding:18px;
+
+}
+
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.number{
+
+font-size:32px;
+
+}
+
+
+table{
+
+display:block;
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+}
+
+
+.timeline{
+
+padding-left:15px;
+
+}
+
+
+.footer{
+
+font-size:13px;
+
+}
+
+}
+
+
+
+@media(max-width:400px){
+
+
+.header h1{
+
+font-size:20px;
+
+}
+
+
+.badge{
+
+font-size:11px;
+
+}
+
+
+.card h2{
+
+font-size:18px;
+
+}
+
+
+}
+
+
+
 .footer{
 
 background:#020617;
@@ -264,8 +391,8 @@ color:#94a3b8;
 }
 
 
-
 </style>
+
 
 </head>
 
@@ -277,9 +404,11 @@ color:#94a3b8;
 
 <div class="header">
 
+
 <h1>
 🚔 Gangnam Police Department
 </h1>
+
 
 <p>
 Major Crime Investigation Division
@@ -295,27 +424,35 @@ CONFIDENTIAL CASE MANAGEMENT SYSTEM
 
 
 
+
+
 <div class="nav">
+
 
 <a href="index.html">
 Dashboard
 </a>
 
+
 <a href="victims.html">
 Victims
 </a>
+
 
 <a href="evidence.html">
 Evidence
 </a>
 
+
 <a href="timeline.html">
 Timeline
 </a>
 
+
 <a href="documents.html">
 Documents
 </a>
+
 
 </div>
 
@@ -327,11 +464,15 @@ Documents
 
 
 
+
+
 <div class="card">
+
 
 <h2>
 Case Profile
 </h2>
+
 
 
 <p>
@@ -428,16 +569,14 @@ Case Documents
 </div>
 
 
-
 </div>
 
 
 
 
 
-
-
 <div class="card">
+
 
 <h2>
 Investigation Summary
@@ -450,72 +589,108 @@ The investigation identified a repeated murder pattern involving victim selectio
 
 
 <p>
-The case reconstruction and chronology records are available in the official investigation documents.
+The complete investigation records are available through the case modules and document archive.
 </p>
 
 
 </div>
-
-
-
-
-
-
-
 <div class="card">
+
 
 <h2>
 Victim Records
 </h2>
 
 
+
 <table>
+
 
 <tr>
 
 <th>ID</th>
+
 <th>Name</th>
+
 <th>Incident Date</th>
 
 </tr>
 
 
+
 <tr>
+
 <td>VIC-001</td>
+
 <td>Rico</td>
+
 <td>25 January 2016</td>
+
 </tr>
 
 
+
 <tr>
+
 <td>VIC-002</td>
+
 <td>Jeanne Jun</td>
+
 <td>5 February 2016</td>
+
 </tr>
 
 
+
 <tr>
+
 <td>VIC-003</td>
+
 <td>Julian Lee</td>
+
 <td>25 April 2016</td>
+
 </tr>
 
 
+
 <tr>
+
 <td>VIC-004</td>
+
 <td>Jayden Lee</td>
+
 <td>5 May 2016</td>
+
 </tr>
+
 
 
 <tr>
+
 <td>VIC-005</td>
+
 <td>Hunter</td>
+
 <td>15 July 2016</td>
+
 </tr>
+
 
 
 </table>
+
+
+<br>
+
+
+<a href="victims.html">
+
+→ Open Complete Victim Database
+
+</a>
+
+
 
 </div>
 
@@ -526,14 +701,18 @@ Victim Records
 
 
 
+
 <div class="card">
+
 
 <h2>
 Evidence Registry
 </h2>
 
 
+
 <ul>
+
 
 <li>
 🎰 Casino Chip - Signature Evidence
@@ -553,6 +732,18 @@ Evidence Registry
 </ul>
 
 
+
+<br>
+
+
+<a href="evidence.html">
+
+→ Open Complete Evidence Registry
+
+</a>
+
+
+
 </div>
 
 
@@ -561,7 +752,10 @@ Evidence Registry
 
 
 
+
+
 <div class="card">
+
 
 <h2>
 Investigation Timeline
@@ -572,11 +766,14 @@ Investigation Timeline
 <div class="timeline">
 
 
+
 <div class="event">
+
 
 <div class="date">
 25 January 2016
 </div>
+
 
 Rico case recorded.
 
@@ -584,11 +781,15 @@ Rico case recorded.
 
 
 
+
+
 <div class="event">
+
 
 <div class="date">
 5 February 2016
 </div>
+
 
 Jeanne Jun case recorded.
 
@@ -596,11 +797,15 @@ Jeanne Jun case recorded.
 
 
 
+
+
 <div class="event">
+
 
 <div class="date">
 25 April 2016
 </div>
+
 
 Julian Lee case recorded.
 
@@ -608,11 +813,15 @@ Julian Lee case recorded.
 
 
 
+
+
 <div class="event">
+
 
 <div class="date">
 5 May 2016
 </div>
+
 
 Jayden Lee case recorded.
 
@@ -620,11 +829,15 @@ Jayden Lee case recorded.
 
 
 
+
+
 <div class="event">
+
 
 <div class="date">
 15 July 2016
 </div>
+
 
 Hunter case recorded.
 
@@ -632,21 +845,55 @@ Hunter case recorded.
 
 
 
+
+
 <div class="event">
+
+
+<div class="date">
+25 August 2016
+</div>
+
+
+Suspect met potential victim but decided not to continue the act.
+
+</div>
+
+
+
+
+
+<div class="event">
+
 
 <div class="date">
 26 August 2016
 </div>
+
 
 Investigation closed after suspect surrender.
 
 </div>
 
 
+
 </div>
 
 
+
+<br>
+
+
+<a href="timeline.html">
+
+→ Open Full Investigation Timeline
+
+</a>
+
+
+
 </div>
+
 
 
 
@@ -657,12 +904,16 @@ Investigation closed after suspect surrender.
 
 <div class="card">
 
+
 <h2>
 Document Archive
 </h2>
 
 
+
+
 <table>
+
 
 <tr>
 
@@ -670,43 +921,57 @@ Document Archive
 Document
 </th>
 
+
 <th>
 Access
 </th>
+
 
 </tr>
 
 
 
+
+
 <tr>
+
 
 <td>
 280816_BAB IV.pdf
 </td>
 
+
 <td>
 
-<a href="280816_BAB%20IV.pdf">
-OPEN
+<a href="documents.html">
+
+OPEN DOCUMENT CENTER
+
 </a>
 
 </td>
 
 
 </tr>
+
+
 
 
 
 <tr>
 
+
 <td>
 280816_BAB V.pdf
 </td>
 
+
 <td>
 
-<a href="280816_BAB%20V.pdf">
-OPEN
+<a href="documents.html">
+
+OPEN DOCUMENT CENTER
+
 </a>
 
 </td>
@@ -715,10 +980,26 @@ OPEN
 </tr>
 
 
+
+
+
 </table>
 
 
+
+<br>
+
+
+<a href="documents.html">
+
+→ Access Case Document Archive
+
+</a>
+
+
+
 </div>
+
 
 
 
@@ -729,63 +1010,118 @@ OPEN
 
 <div class="card">
 
+
 <h2>
-Database Access
+System Data Repository
 </h2>
+
+
 
 
 <ul>
 
 
+
 <li>
+
 <a href="data/cases.json">
-Case Database
+
+🗃 Case Database (JSON)
+
 </a>
+
 </li>
 
 
+
+
+
 <li>
+
 <a href="data/victims.json">
-Victim Database
+
+👤 Victim Records (JSON)
+
 </a>
+
 </li>
 
 
+
+
+
 <li>
+
 <a href="data/suspects.json">
-Suspect Database
+
+🕵 Suspect Records (JSON)
+
 </a>
+
 </li>
 
 
+
+
+
 <li>
+
 <a href="data/evidence.json">
-Evidence Database
+
+🔎 Evidence Records (JSON)
+
 </a>
+
 </li>
+
+
+
 
 
 <li>
+
 <a href="data/timeline.json">
-Timeline Database
+
+📅 Timeline Records (JSON)
+
 </a>
+
 </li>
+
+
 
 
 </ul>
 
 
+
+
+<p>
+
+Raw investigation data repository for system integration.
+
+</p>
+
+
+
 </div>
 
 
 
 
 
+
+
 </div>
+
+
+
+
 
 
 
 <div class="footer">
+
 
 Gangnam Police Department © 2016
 
@@ -793,7 +1129,10 @@ Gangnam Police Department © 2016
 
 Digital Investigation Management System
 
+
 </div>
+
+
 
 
 
