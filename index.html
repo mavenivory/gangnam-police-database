@@ -9,7 +9,7 @@
 
 
 <title>
-Gangnam Police Department | Case Management Portal
+Gangnam Police Department | Confidential Case Archive
 </title>
 
 
@@ -18,7 +18,7 @@ Gangnam Police Department | Case Management Portal
 
 
 /* =========================
-   GLOBAL STYLE
+   GLOBAL
 ========================= */
 
 
@@ -34,13 +34,15 @@ body{
 
 margin:0;
 
-font-family:'Segoe UI', Arial, sans-serif;
+font-family:'Segoe UI',Arial,sans-serif;
 
-background:#050b18;
+background:#050914;
 
 color:white;
 
 }
+
+
 
 
 
@@ -63,86 +65,132 @@ color:inherit;
 
 .header{
 
+
 background:
-linear-gradient(135deg,#020617,#111827);
 
-padding:35px 60px;
+linear-gradient(
+135deg,
+#020617,
+#111827
+);
 
-border-bottom:4px solid #dc2626;
+
+padding:45px 70px;
+
+
+border-bottom:3px solid #b91c1c;
+
 
 display:flex;
 
 align-items:center;
 
-gap:25px;
+gap:30px;
+
 
 }
+
+
 
 
 
 .logo{
 
-width:75px;
 
-height:75px;
+width:90px;
 
-background:#1e3a8a;
+height:90px;
+
 
 border-radius:50%;
 
-display:flex;
 
-align-items:center;
+background:#172554;
 
-justify-content:center;
-
-font-size:35px;
 
 border:3px solid #fbbf24;
 
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+font-size:42px;
+
+
 }
 
 
 
-.header-text h1{
+
+
+.header-content h1{
+
 
 margin:0;
 
-font-size:32px;
 
-letter-spacing:1px;
+font-size:34px;
+
+
+letter-spacing:2px;
+
+
+font-weight:700;
+
 
 }
 
 
 
-.header-text p{
 
-margin:8px 0;
+
+.header-content p{
+
+
+margin:10px 0;
+
 
 color:#cbd5e1;
 
+
 font-size:16px;
 
+
 }
+
+
 
 
 
 .badge{
 
+
 display:inline-block;
 
-background:#991b1b;
 
-padding:7px 18px;
+background:#7f1d1d;
 
-border-radius:20px;
+
+padding:8px 20px;
+
+
+border-radius:30px;
+
 
 font-size:12px;
 
+
 font-weight:bold;
 
+
 letter-spacing:1px;
+
 
 }
 
@@ -157,29 +205,39 @@ letter-spacing:1px;
 
 .navbar{
 
+
 background:#020617;
+
+
+padding:18px 70px;
+
+
+border-bottom:1px solid #1e293b;
+
 
 display:flex;
 
-padding:15px 60px;
 
-gap:30px;
+gap:35px;
 
-border-bottom:1px solid #1e293b;
 
 }
 
 
 
+
+
 .navbar a{
+
 
 color:#cbd5e1;
 
+
 font-weight:600;
+
 
 font-size:14px;
 
-transition:.3s;
 
 }
 
@@ -187,7 +245,9 @@ transition:.3s;
 
 .navbar a:hover{
 
+
 color:#fbbf24;
+
 
 }
 
@@ -195,18 +255,24 @@ color:#fbbf24;
 
 
 
+
+
 /* =========================
-   MAIN CONTAINER
+   CONTAINER
 ========================= */
 
 
 .container{
 
-max-width:1200px;
+
+max-width:1100px;
+
 
 margin:auto;
 
-padding:40px;
+
+padding:50px 40px;
+
 
 }
 
@@ -214,258 +280,352 @@ padding:40px;
 
 
 
+
+
 /* =========================
-   GENERAL CARD
+   CASE PROFILE
+========================= */
+
+
+.case-box{
+
+
+background:
+
+linear-gradient(
+135deg,
+#111827,
+#172554
+);
+
+
+border-left:5px solid #dc2626;
+
+
+padding:40px;
+
+
+border-radius:15px;
+
+
+margin-bottom:35px;
+
+
+}
+
+
+
+
+
+.case-label{
+
+
+color:#94a3b8;
+
+
+font-size:13px;
+
+
+letter-spacing:2px;
+
+
+}
+
+
+
+
+
+.case-title{
+
+
+font-size:38px;
+
+
+margin:15px 0;
+
+
+color:#f8fafc;
+
+
+}
+
+
+
+
+
+.case-info{
+
+
+display:grid;
+
+
+grid-template-columns:repeat(2,1fr);
+
+
+gap:20px;
+
+
+margin-top:30px;
+
+
+}
+
+
+
+
+
+.info-box{
+
+
+background:#020617;
+
+
+padding:20px;
+
+
+border-radius:10px;
+
+
+border:1px solid #1e293b;
+
+
+}
+
+
+
+
+
+.info-box span{
+
+
+display:block;
+
+
+color:#94a3b8;
+
+
+font-size:13px;
+
+
+margin-bottom:8px;
+
+
+}
+
+
+
+
+
+.info-box strong{
+
+
+font-size:18px;
+
+
+color:#fbbf24;
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   CONTENT CARD
 ========================= */
 
 
 .card{
 
+
 background:#111827;
+
 
 border:1px solid #1e293b;
 
+
 border-radius:15px;
 
-padding:30px;
-
-margin-bottom:30px;
-
-box-shadow:
-0 15px 30px rgba(0,0,0,.35);
-
-}
-
-
-
-.card-title{
-
-color:#fbbf24;
-
-font-size:22px;
-
-margin-top:0;
-
-}
-
-
-
-
-
-/* =========================
-   CASE HERO
-========================= */
-
-
-.case-banner{
-
-background:
-linear-gradient(135deg,#172554,#111827);
-
-border-left:5px solid #dc2626;
 
 padding:35px;
 
-border-radius:15px;
 
 margin-bottom:30px;
 
-}
 
+box-shadow:
+0 15px 40px rgba(0,0,0,.35);
 
-
-.case-banner h2{
-
-font-size:34px;
-
-margin:10px 0;
 
 }
 
 
 
-.case-banner p{
+
+
+.card h2{
+
+
+margin-top:0;
+
+
+color:#fbbf24;
+
+
+font-size:24px;
+
+
+}
+
+
+
+
+
+.card p{
+
 
 color:#cbd5e1;
 
+
+line-height:1.8;
+
+
 }
 
 
 
-
-
-.status{
-
-display:inline-block;
-
-background:#166534;
-
-padding:8px 20px;
-
-border-radius:20px;
-
-font-size:13px;
-
-font-weight:bold;
-
-}
 
 
 
 
 
 /* =========================
-   STATISTIC CARD
+   DOCUMENT CARD
 ========================= */
 
 
-.stats{
+.document-grid{
+
 
 display:grid;
 
-grid-template-columns:
-repeat(4,1fr);
 
-gap:20px;
+grid-template-columns:repeat(2,1fr);
 
-}
-
-
-
-.stat-card{
-
-background:#111827;
-
-padding:25px;
-
-border-radius:12px;
-
-text-align:center;
-
-border-top:3px solid #1e3a8a;
-
-}
-
-
-
-.stat-number{
-
-font-size:40px;
-
-font-weight:bold;
-
-color:#38bdf8;
-
-}
-
-
-
-.stat-label{
-
-color:#cbd5e1;
-
-margin-top:8px;
-
-}
-
-
-
-
-
-/* =========================
-   MODULE CARD
-========================= */
-
-
-.modules{
-
-display:grid;
-
-grid-template-columns:
-repeat(2,1fr);
 
 gap:25px;
 
+
 }
 
 
 
-.module-card{
 
-background:#111827;
 
-padding:25px;
+.document-card{
 
-border-radius:15px;
+
+background:#020617;
+
 
 border:1px solid #1e293b;
 
+
+padding:30px;
+
+
+border-radius:15px;
+
+
 transition:.3s;
+
 
 }
 
 
 
-.module-card:hover{
 
-transform:translateY(-5px);
+
+.document-card:hover{
+
 
 border-color:#fbbf24;
 
+
+transform:translateY(-5px);
+
+
 }
 
 
 
-.module-icon{
 
-font-size:40px;
+
+.document-icon{
+
+
+font-size:45px;
+
 
 }
 
 
 
-.module-card h3{
+
+
+.document-card h3{
+
 
 color:#fbbf24;
 
+
+}
+
+
+
+
+
+.button{
+
+
+display:inline-block;
+
+
+margin-top:15px;
+
+
+background:#1d4ed8;
+
+
+padding:12px 25px;
+
+
+border-radius:8px;
+
+
+font-weight:bold;
+
+
 }
 
 
 
 
 
-/* =========================
-   DOCUMENT TABLE
-========================= */
+.button:hover{
 
 
-table{
+background:#2563eb;
 
-width:100%;
-
-border-collapse:collapse;
 
 }
 
 
 
-th,td{
-
-padding:14px;
-
-border-bottom:1px solid #334155;
-
-text-align:left;
-
-}
-
-
-
-th{
-
-color:#fbbf24;
-
-}
 
 
 
@@ -478,18 +638,23 @@ color:#fbbf24;
 
 .footer{
 
+
 background:#020617;
 
-padding:25px;
+
+padding:30px;
+
 
 text-align:center;
 
+
 color:#94a3b8;
+
 
 margin-top:40px;
 
-}
 
+}
 
 
 
@@ -499,63 +664,21 @@ margin-top:40px;
 ========================= */
 
 
-@media(max-width:900px){
+@media(max-width:800px){
+
 
 
 .header{
 
-padding:25px;
 
-}
+padding:30px;
 
-
-
-.navbar{
-
-padding:15px 25px;
-
-flex-wrap:wrap;
-
-}
-
-
-
-.container{
-
-padding:25px;
-
-}
-
-
-
-.stats{
-
-grid-template-columns:
-repeat(2,1fr);
-
-}
-
-
-}
-
-
-
-@media(max-width:600px){
-
-
-.header{
 
 flex-direction:column;
+
 
 text-align:center;
 
-}
-
-
-
-.header-text h1{
-
-font-size:24px;
 
 }
 
@@ -563,9 +686,15 @@ font-size:24px;
 
 .navbar{
 
+
+padding:20px 30px;
+
+
 flex-direction:column;
 
+
 gap:15px;
+
 
 }
 
@@ -573,54 +702,41 @@ gap:15px;
 
 .container{
 
-padding:15px;
+
+padding:25px 15px;
+
 
 }
 
 
 
-.stats{
+.case-title{
+
+
+font-size:28px;
+
+
+}
+
+
+
+.case-info{
+
 
 grid-template-columns:1fr;
 
+
 }
 
 
 
-.modules{
+.document-grid{
+
 
 grid-template-columns:1fr;
 
-}
-
-
-
-.case-banner h2{
-
-font-size:25px;
 
 }
-
-
-
-.card{
-
-padding:20px;
-
-}
-
-
-
-table{
-
-display:block;
-
-overflow-x:auto;
-
-white-space:nowrap;
-
-}
-
 
 
 }
@@ -650,7 +766,8 @@ white-space:nowrap;
 
 
 
-<div class="header-text">
+
+<div class="header-content">
 
 
 <h1>
@@ -658,14 +775,16 @@ Gangnam Police Department
 </h1>
 
 
+
 <p>
 Major Crime Investigation Division
 </p>
 
 
+
 <span class="badge">
 
-CONFIDENTIAL CASE MANAGEMENT SYSTEM
+CONFIDENTIAL CASE ARCHIVE
 
 </span>
 
@@ -673,7 +792,9 @@ CONFIDENTIAL CASE MANAGEMENT SYSTEM
 </div>
 
 
+
 </header>
+
 
 
 
@@ -689,32 +810,24 @@ CONFIDENTIAL CASE MANAGEMENT SYSTEM
 
 
 <a href="index.html">
-Dashboard
+
+Home
+
 </a>
 
-
-<a href="victims.html">
-Victims
-</a>
-
-
-<a href="evidence.html">
-Evidence
-</a>
-
-
-<a href="timeline.html">
-Timeline
-</a>
 
 
 <a href="documents.html">
-Documents
+
+Document Archive
+
 </a>
 
 
 
 </nav>
+
+
 
 
 
@@ -740,59 +853,150 @@ Documents
 ========================= -->
 
 
-<section class="case-banner">
-
-
-<p>
-CASE FILE
-</p>
+<section class="case-box">
 
 
 
-<h2>
+<div class="case-label">
+
+RESTRICTED CASE FILE
+
+</div>
+
+
+
+
+<h2 class="case-title">
+
 The Grand Casino Murder
+
 </h2>
 
 
 
+
+
 <p>
-Case ID:
-<b>
-GPD-2016-INS-001
-</b>
+
+Official investigation archive maintained by Gangnam Police Department Major Crime Investigation Division.
+
 </p>
 
 
 
-<p>
-Classification:
-<b>
-Serial Murder Investigation
-</b>
-</p>
 
 
 
-<p>
-Investigation Unit:
-<b>
-Gangnam Major Crime Investigation Unit
-</b>
-</p>
+<div class="case-info">
 
 
 
-<br>
 
 
 
-<span class="status">
+<div class="info-box">
 
-CASE CLOSED
+
+<span>
+
+CASE NUMBER
 
 </span>
 
 
+<strong>
+
+GPD-2016-INS-001
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="info-box">
+
+
+<span>
+
+CASE STATUS
+
+</span>
+
+
+<strong>
+
+CLOSED
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="info-box">
+
+
+<span>
+
+CLASSIFICATION
+
+</span>
+
+
+<strong>
+
+SERIAL MURDER INVESTIGATION
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="info-box">
+
+
+<span>
+
+ACCESS LEVEL
+
+</span>
+
+
+<strong>
+
+CONFIDENTIAL
+
+</strong>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
 
 </section>
 
@@ -801,225 +1005,66 @@ CASE CLOSED
 
 
 
+
+
+
 <!-- =========================
-     CASE SUMMARY
+     CASE OVERVIEW
 ========================= -->
 
 
 <section class="card">
 
 
-<h2 class="card-title">
 
-Investigation Overview
+<h2>
 
-</h2>
-
-
-
-<p>
-
-The investigation identified a repeated criminal pattern involving victim targeting, incapacitation method, insulin injection, symbolic casino chips, and recurring evidence characteristics.
-
-</p>
-
-
-
-<p>
-
-This digital case management portal contains investigation records, evidence registry, victim profiles, chronological events, and official case documents.
-
-</p>
-
-
-<!-- =========================
-     INVESTIGATION MODULES
-========================= -->
-
-
-<section class="card">
-
-
-<h2 class="card-title">
-
-Investigation Modules
+Case Overview
 
 </h2>
 
 
 
 
-
-<div class="modules">
-
-
-
-
-
-<div class="module-card">
-
-
-<div class="module-icon">
-
-👤
-
-</div>
-
-
-<h3>
-Victim Database
-</h3>
-
-
 <p>
 
-Access complete victim records, incident dates, and case-related information.
+The Grand Casino Murder investigation archive contains official records related to the criminal investigation conducted by the Gangnam Police Department.
 
 </p>
 
 
-<a href="victims.html">
-
-Open Victim Records →
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="module-card">
-
-
-<div class="module-icon">
-
-🔎
-
-</div>
-
-
-<h3>
-Evidence Registry
-</h3>
-
 
 <p>
 
-Review collected evidence, investigation findings, and evidence classification.
+This restricted portal provides access to verified case documentation containing investigation reconstruction and chronological case reporting.
 
 </p>
 
 
-<a href="evidence.html">
-
-Open Evidence Registry →
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="module-card">
-
-
-<div class="module-icon">
-
-📅
-
-</div>
-
-
-<h3>
-Investigation Timeline
-</h3>
-
 
 <p>
 
-View chronological records of incidents and investigation progress.
+Unauthorized access, distribution, or modification of archived materials is prohibited.
 
 </p>
 
 
-<a href="timeline.html">
-
-Open Timeline →
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="module-card">
-
-
-<div class="module-icon">
-
-📂
-
-</div>
-
-
-<h3>
-Document Archive
-</h3>
-
-
-<p>
-
-Access official investigation reports and archived case documents.
-
-</p>
-
-
-<a href="documents.html">
-
-Open Document Center →
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-</div>
 
 
 </section>
+
+
+
+
 <!-- =========================
-     OFFICIAL DOCUMENT ARCHIVE
+     DOCUMENT ARCHIVE
 ========================= -->
 
 
 <section class="card">
 
 
-<h2 class="card-title">
+<h2>
 
 Official Case Documents
 
@@ -1027,9 +1072,10 @@ Official Case Documents
 
 
 
+
 <p>
 
-Access authorized investigation documents related to The Grand Casino Murder case.
+Access authorized investigation reports associated with The Grand Casino Murder case.
 
 </p>
 
@@ -1037,99 +1083,114 @@ Access authorized investigation documents related to The Grand Casino Murder cas
 
 
 
-<table>
-
-
-<tr>
-
-<th>
-Document
-</th>
-
-
-<th>
-Description
-</th>
-
-
-<th>
-Access
-</th>
-
-
-</tr>
+<div class="document-grid">
 
 
 
 
 
-<tr>
 
 
-<td>
+<div class="document-card">
+
+
+<div class="document-icon">
+
+📄
+
+</div>
+
+
+
+<h3>
+
 280816_BAB IV.pdf
-</td>
+
+</h3>
 
 
-<td>
+
+<p>
+
 Crime Reconstruction Report
-</td>
+
+<br><br>
+
+Contains investigation reconstruction and analysis of the criminal mechanism.
+
+</p>
 
 
-<td>
 
-<a href="documents.html">
+<a class="button" href="documents.html">
 
-View File →
+ACCESS DOCUMENT
 
 </a>
 
-</td>
 
 
-</tr>
-
-
+</div>
 
 
 
 
 
-<tr>
 
 
-<td>
+
+
+<div class="document-card">
+
+
+<div class="document-icon">
+
+📄
+
+</div>
+
+
+
+<h3>
+
 280816_BAB V.pdf
-</td>
+
+</h3>
 
 
-<td>
+
+<p>
+
 Crime Chronology Report
-</td>
+
+<br><br>
+
+Contains chronological records and investigation sequence documentation.
+
+</p>
 
 
-<td>
 
-<a href="documents.html">
+<a class="button" href="documents.html">
 
-View File →
+ACCESS DOCUMENT
 
 </a>
 
-</td>
 
 
-</tr>
-
-
+</div>
 
 
 
-</table>
 
+
+
+</div>
 
 
 </section>
+
 
 
 
@@ -1139,16 +1200,16 @@ View File →
 
 
 <!-- =========================
-     CASE INFORMATION
+     SECURITY NOTICE
 ========================= -->
 
 
 <section class="card">
 
 
-<h2 class="card-title">
+<h2>
 
-System Information
+Security Notice
 
 </h2>
 
@@ -1156,8 +1217,7 @@ System Information
 
 <p>
 
-<b>Department:</b>
-Gangnam Police Department
+This archive is an official digital record repository of Gangnam Police Department.
 
 </p>
 
@@ -1165,8 +1225,7 @@ Gangnam Police Department
 
 <p>
 
-<b>Division:</b>
-Major Crime Investigation Division
+All documents contained within this system are classified as confidential investigation materials.
 
 </p>
 
@@ -1174,17 +1233,7 @@ Major Crime Investigation Division
 
 <p>
 
-<b>System:</b>
-Digital Investigation Management Portal
-
-</p>
-
-
-
-<p>
-
-<b>Access Level:</b>
-Confidential Case Archive
+Access, reproduction, and distribution without authorization are strictly prohibited.
 
 </p>
 
@@ -1198,7 +1247,9 @@ Confidential Case Archive
 
 
 
+
 </div>
+
 
 
 
@@ -1217,13 +1268,13 @@ Confidential Case Archive
 
 Gangnam Police Department © 2016
 
-<br>
-
-Digital Investigation Management System
-
 <br><br>
 
-CONFIDENTIAL LAW ENFORCEMENT DATABASE
+Major Crime Investigation Division
+
+<br>
+
+Confidential Case Archive System
 
 
 </footer>
@@ -1233,6 +1284,9 @@ CONFIDENTIAL LAW ENFORCEMENT DATABASE
 
 
 
+
+
 </body>
+
 
 </html>
