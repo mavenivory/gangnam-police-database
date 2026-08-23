@@ -9,8 +9,9 @@
 
 
 <title>
-Gangnam Police Department | Document Archive
+Gangnam Police Department | Confidential Document Vault
 </title>
+
 
 
 <style>
@@ -50,6 +51,8 @@ color:inherit;
 
 
 
+
+
 /* HEADER */
 
 
@@ -68,12 +71,14 @@ linear-gradient(
 padding:45px 70px;
 
 
-border-bottom:3px solid #dc2626;
+border-bottom:3px solid #b91c1c;
 
 
 display:flex;
 
+
 align-items:center;
+
 
 gap:30px;
 
@@ -88,6 +93,7 @@ gap:30px;
 
 
 width:90px;
+
 
 height:90px;
 
@@ -135,8 +141,6 @@ letter-spacing:2px;
 
 
 
-
-
 .header-content p{
 
 
@@ -147,6 +151,7 @@ margin:10px 0;
 
 
 }
+
 
 
 
@@ -172,6 +177,9 @@ font-size:12px;
 font-weight:bold;
 
 
+letter-spacing:1px;
+
+
 }
 
 
@@ -180,7 +188,7 @@ font-weight:bold;
 
 
 
-/* NAV */
+/* NAVBAR */
 
 
 .navbar{
@@ -202,6 +210,7 @@ border-bottom:1px solid #1e293b;
 
 
 }
+
 
 
 
@@ -232,7 +241,6 @@ color:#fbbf24;
 
 
 
-
 /* CONTAINER */
 
 
@@ -256,10 +264,11 @@ padding:50px 40px;
 
 
 
-/* BANNER */
+
+/* DOCUMENT PROFILE */
 
 
-.banner{
+.document-banner{
 
 
 background:
@@ -287,7 +296,7 @@ margin-bottom:35px;
 
 
 
-.banner h2{
+.document-banner h2{
 
 
 font-size:36px;
@@ -300,7 +309,7 @@ margin:15px 0;
 
 
 
-.banner p{
+.document-banner p{
 
 
 color:#cbd5e1;
@@ -327,19 +336,16 @@ padding:8px 20px;
 border-radius:20px;
 
 
-font-weight:bold;
-
-
 font-size:13px;
 
 
+font-weight:bold;
+
+
 }
-
-
-
-
-
-/* DOCUMENT CARD */
+/* =========================
+   DOCUMENT GRID
+========================= */
 
 
 .document-grid{
@@ -355,6 +361,8 @@ gap:25px;
 
 
 }
+
+
 
 
 
@@ -377,10 +385,14 @@ border-radius:15px;
 transition:.3s;
 
 
-box-shadow:0 15px 35px rgba(0,0,0,.35);
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.35);
 
 
 }
+
+
 
 
 
@@ -397,13 +409,20 @@ transform:translateY(-5px);
 
 
 
-.document-icon{
 
 
-font-size:45px;
+.file-icon{
+
+
+font-size:50px;
+
+
+margin-bottom:15px;
 
 
 }
+
+
 
 
 
@@ -413,19 +432,26 @@ font-size:45px;
 color:#fbbf24;
 
 
-font-size:22px;
+font-size:23px;
+
+
+margin:10px 0;
 
 
 }
 
-/* DOCUMENT ACCESS */
+
+
 
 
 .document-card p{
 
+
 color:#cbd5e1;
 
+
 line-height:1.7;
+
 
 }
 
@@ -433,29 +459,32 @@ line-height:1.7;
 
 
 
-.document-meta{
+
+.metadata{
 
 
 background:#020617;
 
 
-padding:15px;
+padding:20px;
 
 
 border-radius:10px;
 
 
-margin:20px 0;
-
-
 border-left:3px solid #1d4ed8;
+
+
+margin:20px 0;
 
 
 }
 
 
 
-.document-meta span{
+
+
+.metadata span{
 
 
 display:block;
@@ -464,7 +493,7 @@ display:block;
 color:#94a3b8;
 
 
-font-size:13px;
+font-size:12px;
 
 
 margin-bottom:5px;
@@ -474,15 +503,13 @@ margin-bottom:5px;
 
 
 
-.document-meta strong{
+.metadata strong{
 
 
-color:#f8fafc;
+color:white;
 
 
 }
-
-
 
 
 
@@ -506,13 +533,15 @@ border-radius:8px;
 font-weight:bold;
 
 
-margin-top:15px;
+margin-top:10px;
 
 
 transition:.3s;
 
 
 }
+
+
 
 
 
@@ -553,6 +582,8 @@ margin-top:30px;
 
 
 
+
+
 .notice h3{
 
 
@@ -560,6 +591,8 @@ color:#fbbf24;
 
 
 }
+
+
 
 
 
@@ -593,11 +626,11 @@ margin-top:40px;
 
 
 
+
 /* RESPONSIVE */
 
 
 @media(max-width:800px){
-
 
 
 .header{
@@ -613,7 +646,6 @@ text-align:center;
 
 
 }
-
 
 
 
@@ -643,17 +675,6 @@ padding:25px 15px;
 
 
 
-.banner h2{
-
-
-font-size:28px;
-
-
-}
-
-
-
-
 .document-grid{
 
 
@@ -664,17 +685,196 @@ grid-template-columns:1fr;
 
 
 
+.document-banner h2{
+
+
+font-size:28px;
+
+
 }
 
+
+}
 
 
 </style>
 
 
+</head>
+<body>
+
+
+
 
 
 <!-- =========================
-     DOCUMENT RECORDS
+     HEADER
+========================= -->
+
+
+<header class="header">
+
+
+<div class="logo">
+
+🚔
+
+</div>
+
+
+
+
+<div class="header-content">
+
+
+<h1>
+
+Gangnam Police Department
+
+</h1>
+
+
+
+<p>
+
+Major Crime Investigation Division
+
+</p>
+
+
+
+
+<span class="badge">
+
+CONFIDENTIAL DOCUMENT VAULT
+
+</span>
+
+
+
+</div>
+
+
+
+</header>
+
+
+
+
+
+
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+
+<nav class="navbar">
+
+
+<a href="index.html">
+
+Home
+
+</a>
+
+
+
+<a href="documents.html">
+
+Document Archive
+
+</a>
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+<div class="container">
+
+
+
+
+
+
+
+
+<!-- =========================
+     DOCUMENT PROFILE
+========================= -->
+
+
+<section class="document-banner">
+
+
+<p>
+
+AUTHORIZED DOCUMENT REPOSITORY
+
+</p>
+
+
+
+
+
+<h2>
+
+Case Document Archive
+
+</h2>
+
+
+
+
+
+<p>
+
+The Grand Casino Murder Investigation Files
+
+</p>
+
+
+
+
+<p>
+
+Case Number:
+
+<b>
+
+GPD-2016-INS-001
+
+</b>
+
+</p>
+
+
+
+
+<span class="status">
+
+CONFIDENTIAL ACCESS
+
+</span>
+
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+     CLASSIFIED DOCUMENTS
 ========================= -->
 
 
@@ -686,10 +886,13 @@ grid-template-columns:1fr;
 
 
 
+<!-- BAB IV -->
+
+
 <div class="document-card">
 
 
-<div class="document-icon">
+<div class="file-icon">
 
 📄
 
@@ -700,10 +903,9 @@ grid-template-columns:1fr;
 
 <h3>
 
-280816_BAB IV.pdf
+CLASSIFIED FILE IV
 
 </h3>
-
 
 
 
@@ -718,7 +920,28 @@ Crime Reconstruction Report
 
 
 
-<div class="document-meta">
+
+<div class="metadata">
+
+
+<span>
+
+DOCUMENT ID
+
+</span>
+
+
+<strong>
+
+GPD-DOC-2016-IV
+
+</strong>
+
+
+
+
+<br><br>
+
 
 
 <span>
@@ -736,13 +959,15 @@ Investigation Reconstruction Report
 
 
 
+
+
 <br><br>
 
 
 
 <span>
 
-CLASSIFICATION
+SECURITY LEVEL
 
 </span>
 
@@ -755,22 +980,25 @@ CONFIDENTIAL
 
 
 
+
+
 <br><br>
 
 
 
 <span>
 
-ACCESS FORMAT
+FORMAT
 
 </span>
 
 
 <strong>
 
-PDF DOCUMENT
+PDF ARCHIVE
 
 </strong>
+
 
 
 
@@ -781,9 +1009,10 @@ PDF DOCUMENT
 
 
 
+
 <p>
 
-Contains reconstruction analysis of the criminal mechanism, investigation findings, and official case examination records.
+Official reconstruction report containing investigation analysis and case findings related to The Grand Casino Murder.
 
 </p>
 
@@ -791,10 +1020,9 @@ Contains reconstruction analysis of the criminal mechanism, investigation findin
 
 
 
-
 <a class="access-button" href="280816_BAB%20IV.pdf" download>
 
-DOWNLOAD DOCUMENT
+ACCESS FILE →
 
 </a>
 
@@ -811,13 +1039,13 @@ DOWNLOAD DOCUMENT
 
 
 
-
+<!-- BAB V -->
 
 
 <div class="document-card">
 
 
-<div class="document-icon">
+<div class="file-icon">
 
 📄
 
@@ -828,10 +1056,9 @@ DOWNLOAD DOCUMENT
 
 <h3>
 
-280816_BAB V.pdf
+CLASSIFIED FILE V
 
 </h3>
-
 
 
 
@@ -846,7 +1073,28 @@ Crime Chronology Report
 
 
 
-<div class="document-meta">
+
+<div class="metadata">
+
+
+<span>
+
+DOCUMENT ID
+
+</span>
+
+
+<strong>
+
+GPD-DOC-2016-V
+
+</strong>
+
+
+
+
+<br><br>
+
 
 
 <span>
@@ -864,13 +1112,15 @@ Investigation Chronology Report
 
 
 
+
+
 <br><br>
 
 
 
 <span>
 
-CLASSIFICATION
+SECURITY LEVEL
 
 </span>
 
@@ -883,22 +1133,25 @@ CONFIDENTIAL
 
 
 
+
+
 <br><br>
 
 
 
 <span>
 
-ACCESS FORMAT
+FORMAT
 
 </span>
 
 
 <strong>
 
-PDF DOCUMENT
+PDF ARCHIVE
 
 </strong>
+
 
 
 
@@ -909,9 +1162,10 @@ PDF DOCUMENT
 
 
 
+
 <p>
 
-Contains chronological sequence of incidents, investigation progress, and official case timeline documentation.
+Official chronology report documenting investigation sequence and case development records.
 
 </p>
 
@@ -919,10 +1173,9 @@ Contains chronological sequence of incidents, investigation progress, and offici
 
 
 
-
 <a class="access-button" href="280816_BAB%20V.pdf" download>
 
-DOWNLOAD DOCUMENT
+ACCESS FILE →
 
 </a>
 
@@ -956,7 +1209,7 @@ DOWNLOAD DOCUMENT
 
 <h3>
 
-⚠ Security Notice
+⚠ SECURITY NOTICE
 
 </h3>
 
@@ -965,15 +1218,16 @@ DOWNLOAD DOCUMENT
 
 <p>
 
-This document archive contains confidential investigation materials belonging to Gangnam Police Department.
+This document vault contains confidential investigation materials belonging to Gangnam Police Department Major Crime Investigation Division.
 
 </p>
 
 
 
+
 <p>
 
-Documents are provided exclusively for authorized review purposes. Unauthorized copying, modification, or distribution is prohibited.
+Access is limited to authorized personnel. Unauthorized reproduction, modification, or distribution of archived documents is strictly prohibited.
 
 </p>
 
@@ -990,7 +1244,6 @@ Documents are provided exclusively for authorized review purposes. Unauthorized 
 
 
 </div>
-
 
 
 
@@ -1019,7 +1272,7 @@ Major Crime Investigation Division
 <br>
 
 
-Confidential Case Archive System
+Confidential Document Vault System
 
 
 </footer>
