@@ -4,52 +4,128 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gangnam Police Department | Investigation System</title>
+
+<title>
+Gangnam Police Department | Case Management Portal
+</title>
+
 
 
 <style>
 
+
+/* =========================
+   GLOBAL STYLE
+========================= */
+
+
 *{
+
 box-sizing:border-box;
+
 }
+
 
 
 body{
 
 margin:0;
-font-family:'Segoe UI',Arial,sans-serif;
-background:#0b1120;
+
+font-family:'Segoe UI', Arial, sans-serif;
+
+background:#050b18;
+
 color:white;
 
 }
 
 
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+
 .header{
 
-background:linear-gradient(135deg,#111827,#020617);
+background:
+linear-gradient(135deg,#020617,#111827);
 
-padding:35px 45px;
+padding:35px 60px;
 
 border-bottom:4px solid #dc2626;
 
+display:flex;
+
+align-items:center;
+
+gap:25px;
+
 }
 
 
-.header h1{
 
-font-size:32px;
+.logo{
+
+width:75px;
+
+height:75px;
+
+background:#1e3a8a;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:35px;
+
+border:3px solid #fbbf24;
+
+}
+
+
+
+.header-text h1{
+
 margin:0;
 
+font-size:32px;
+
+letter-spacing:1px;
+
 }
 
 
-.header p{
+
+.header-text p{
+
+margin:8px 0;
 
 color:#cbd5e1;
 
+font-size:16px;
+
 }
+
 
 
 .badge{
@@ -58,79 +134,115 @@ display:inline-block;
 
 background:#991b1b;
 
-padding:8px 18px;
+padding:7px 18px;
 
 border-radius:20px;
 
-font-size:13px;
-
-margin-top:10px;
-
-}
-
-
-
-.nav{
-
-background:#020617;
-
-padding:15px 40px;
-
-display:flex;
-
-gap:25px;
-
-}
-
-
-
-.nav a{
-
-color:#93c5fd;
-
-text-decoration:none;
+font-size:12px;
 
 font-weight:bold;
 
+letter-spacing:1px;
+
+}
+
+
+
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+
+.navbar{
+
+background:#020617;
+
+display:flex;
+
+padding:15px 60px;
+
+gap:30px;
+
+border-bottom:1px solid #1e293b;
+
 }
 
 
 
-.nav a:hover{
+.navbar a{
 
-color:white;
+color:#cbd5e1;
+
+font-weight:600;
+
+font-size:14px;
+
+transition:.3s;
 
 }
 
+
+
+.navbar a:hover{
+
+color:#fbbf24;
+
+}
+
+
+
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 
 .container{
 
-padding:35px;
+max-width:1200px;
+
+margin:auto;
+
+padding:40px;
 
 }
 
+
+
+
+
+/* =========================
+   GENERAL CARD
+========================= */
 
 
 .card{
 
-background:#1e293b;
+background:#111827;
 
-padding:25px;
+border:1px solid #1e293b;
 
-border-radius:14px;
+border-radius:15px;
 
-margin-bottom:25px;
+padding:30px;
 
-box-shadow:0 10px 25px rgba(0,0,0,.35);
+margin-bottom:30px;
+
+box-shadow:
+0 15px 30px rgba(0,0,0,.35);
 
 }
 
 
 
-.card h2{
+.card-title{
 
 color:#fbbf24;
+
+font-size:22px;
 
 margin-top:0;
 
@@ -138,11 +250,81 @@ margin-top:0;
 
 
 
-.grid{
+
+
+/* =========================
+   CASE HERO
+========================= */
+
+
+.case-banner{
+
+background:
+linear-gradient(135deg,#172554,#111827);
+
+border-left:5px solid #dc2626;
+
+padding:35px;
+
+border-radius:15px;
+
+margin-bottom:30px;
+
+}
+
+
+
+.case-banner h2{
+
+font-size:34px;
+
+margin:10px 0;
+
+}
+
+
+
+.case-banner p{
+
+color:#cbd5e1;
+
+}
+
+
+
+
+
+.status{
+
+display:inline-block;
+
+background:#166534;
+
+padding:8px 20px;
+
+border-radius:20px;
+
+font-size:13px;
+
+font-weight:bold;
+
+}
+
+
+
+
+
+/* =========================
+   STATISTIC CARD
+========================= */
+
+
+.stats{
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:
+repeat(4,1fr);
 
 gap:20px;
 
@@ -152,7 +334,7 @@ gap:20px;
 
 .stat-card{
 
-background:#1e293b;
+background:#111827;
 
 padding:25px;
 
@@ -160,11 +342,13 @@ border-radius:12px;
 
 text-align:center;
 
+border-top:3px solid #1e3a8a;
+
 }
 
 
 
-.number{
+.stat-number{
 
 font-size:40px;
 
@@ -176,12 +360,83 @@ color:#38bdf8;
 
 
 
-.label{
+.stat-label{
 
 color:#cbd5e1;
 
+margin-top:8px;
+
 }
 
+
+
+
+
+/* =========================
+   MODULE CARD
+========================= */
+
+
+.modules{
+
+display:grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:25px;
+
+}
+
+
+
+.module-card{
+
+background:#111827;
+
+padding:25px;
+
+border-radius:15px;
+
+border:1px solid #1e293b;
+
+transition:.3s;
+
+}
+
+
+
+.module-card:hover{
+
+transform:translateY(-5px);
+
+border-color:#fbbf24;
+
+}
+
+
+
+.module-icon{
+
+font-size:40px;
+
+}
+
+
+
+.module-card h3{
+
+color:#fbbf24;
+
+}
+
+
+
+
+
+/* =========================
+   DOCUMENT TABLE
+========================= */
 
 
 table{
@@ -196,9 +451,9 @@ border-collapse:collapse;
 
 th,td{
 
-padding:12px;
+padding:14px;
 
-border-bottom:1px solid #475569;
+border-bottom:1px solid #334155;
 
 text-align:left;
 
@@ -206,81 +461,114 @@ text-align:left;
 
 
 
-a{
-
-color:#60a5fa;
-
-text-decoration:none;
-
-}
-
-
-
-a:hover{
-
-text-decoration:underline;
-
-}
-
-
-
-.timeline{
-
-border-left:3px solid #dc2626;
-
-padding-left:20px;
-
-}
-
-
-
-.event{
-
-margin-bottom:25px;
-
-}
-
-
-
-.date{
+th{
 
 color:#fbbf24;
 
-font-weight:bold;
+}
+
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+.footer{
+
+background:#020617;
+
+padding:25px;
+
+text-align:center;
+
+color:#94a3b8;
+
+margin-top:40px;
 
 }
 
 
 
-.status{
-
-background:#166534;
-
-padding:5px 15px;
-
-border-radius:20px;
-
-}
 
 
+/* =========================
+   RESPONSIVE
+========================= */
 
-/* MOBILE RESPONSIVE */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
 
 .header{
 
-padding:25px 20px;
+padding:25px;
 
 }
 
 
-.header h1{
+
+.navbar{
+
+padding:15px 25px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.container{
+
+padding:25px;
+
+}
+
+
+
+.stats{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.header{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+
+.header-text h1{
 
 font-size:24px;
 
 }
+
+
+
+.navbar{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
 
 
 .container{
@@ -290,36 +578,37 @@ padding:15px;
 }
 
 
-.nav{
 
-flex-direction:column;
-
-padding:15px 20px;
-
-gap:12px;
-
-}
-
-
-.card{
-
-padding:18px;
-
-}
-
-
-.grid{
+.stats{
 
 grid-template-columns:1fr;
 
 }
 
 
-.number{
 
-font-size:32px;
+.modules{
+
+grid-template-columns:1fr;
 
 }
+
+
+
+.case-banner h2{
+
+font-size:25px;
+
+}
+
+
+
+.card{
+
+padding:20px;
+
+}
+
 
 
 table{
@@ -333,80 +622,39 @@ white-space:nowrap;
 }
 
 
-.timeline{
-
-padding-left:15px;
 
 }
 
-
-.footer{
-
-font-size:13px;
-
-}
-
-}
-
-
-
-@media(max-width:400px){
-
-
-.header h1{
-
-font-size:20px;
-
-}
-
-
-.badge{
-
-font-size:11px;
-
-}
-
-
-.card h2{
-
-font-size:18px;
-
-}
-
-
-}
-
-
-
-.footer{
-
-background:#020617;
-
-padding:20px;
-
-text-align:center;
-
-color:#94a3b8;
-
-}
 
 
 </style>
 
 
 </head>
-
-
-
 <body>
 
 
+<!-- =========================
+     POLICE HEADER
+========================= -->
 
-<div class="header">
+
+<header class="header">
+
+
+<div class="logo">
+
+🚔
+
+</div>
+
+
+
+<div class="header-text">
 
 
 <h1>
-🚔 Gangnam Police Department
+Gangnam Police Department
 </h1>
 
 
@@ -416,17 +664,28 @@ Major Crime Investigation Division
 
 
 <span class="badge">
+
 CONFIDENTIAL CASE MANAGEMENT SYSTEM
+
 </span>
 
 
 </div>
 
 
+</header>
 
 
 
-<div class="nav">
+
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+
+<nav class="navbar">
 
 
 <a href="index.html">
@@ -454,10 +713,18 @@ Documents
 </a>
 
 
-</div>
+
+</nav>
 
 
 
+
+
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
 
 
 <div class="container">
@@ -466,61 +733,123 @@ Documents
 
 
 
-<div class="card">
+
+
+<!-- =========================
+     CASE PROFILE
+========================= -->
+
+
+<section class="case-banner">
+
+
+<p>
+CASE FILE
+</p>
+
 
 
 <h2>
-Case Profile
+The Grand Casino Murder
 </h2>
 
 
 
 <p>
-<b>Case ID:</b> GPD-2016-INS-001
+Case ID:
+<b>
+GPD-2016-INS-001
+</b>
 </p>
 
 
+
 <p>
-<b>Case Name:</b> The Grand Casino Murder
+Classification:
+<b>
+Serial Murder Investigation
+</b>
 </p>
 
 
+
 <p>
-<b>Case Classification:</b> Serial Murder Investigation
+Investigation Unit:
+<b>
+Gangnam Major Crime Investigation Unit
+</b>
 </p>
 
 
-<p>
-<b>Investigation Unit:</b> Gangnam Major Crime Investigation Unit
-</p>
+
+<br>
 
 
-<p>
-<b>Status:</b>
 
 <span class="status">
-CLOSED
+
+CASE CLOSED
+
 </span>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+     CASE SUMMARY
+========================= -->
+
+
+<section class="card">
+
+
+<h2 class="card-title">
+
+Investigation Overview
+
+</h2>
+
+
+
+<p>
+
+The investigation identified a repeated criminal pattern involving victim targeting, incapacitation method, insulin injection, symbolic casino chips, and recurring evidence characteristics.
 
 </p>
 
 
-</div>
+
+<p>
+
+This digital case management portal contains investigation records, evidence registry, victim profiles, chronological events, and official case documents.
+
+</p>
 
 
 
+</section>
+<!-- =========================
+     CASE STATISTICS
+========================= -->
 
 
-<div class="grid">
+<section class="stats">
+
 
 
 <div class="stat-card">
 
-<div class="number">
-5
+<div class="stat-number">
+05
 </div>
 
-<div class="label">
+<div class="stat-label">
 Confirmed Victims
 </div>
 
@@ -528,13 +857,15 @@ Confirmed Victims
 
 
 
+
+
 <div class="stat-card">
 
-<div class="number">
-1
+<div class="stat-number">
+01
 </div>
 
-<div class="label">
+<div class="stat-label">
 Primary Suspect
 </div>
 
@@ -542,13 +873,15 @@ Primary Suspect
 
 
 
+
+
 <div class="stat-card">
 
-<div class="number">
-3
+<div class="stat-number">
+03
 </div>
 
-<div class="label">
+<div class="stat-label">
 Evidence Items
 </div>
 
@@ -556,140 +889,83 @@ Evidence Items
 
 
 
+
+
 <div class="stat-card">
 
-<div class="number">
-2
+<div class="stat-number">
+02
 </div>
 
-<div class="label">
-Case Documents
+<div class="stat-label">
+Official Documents
 </div>
-
-</div>
-
 
 </div>
 
 
 
+</section>
 
 
-<div class="card">
 
 
-<h2>
-Investigation Summary
-</h2>
 
 
-<p>
-The investigation identified a repeated murder pattern involving victim selection, incapacitation, insulin injection, symbolic casino chips, and recurring evidence patterns.
-</p>
 
 
-<p>
-The complete investigation records are available through the case modules and document archive.
-</p>
+
+<!-- =========================
+     INVESTIGATION MODULES
+========================= -->
 
 
-</div>
-<div class="card">
+<section class="card">
 
 
-<h2>
-Victim Records
+<h2 class="card-title">
+
+Investigation Modules
+
 </h2>
 
 
 
-<table>
 
 
-<tr>
-
-<th>ID</th>
-
-<th>Name</th>
-
-<th>Incident Date</th>
-
-</tr>
+<div class="modules">
 
 
 
-<tr>
-
-<td>VIC-001</td>
-
-<td>Rico</td>
-
-<td>25 January 2016</td>
-
-</tr>
 
 
-
-<tr>
-
-<td>VIC-002</td>
-
-<td>Jeanne Jun</td>
-
-<td>5 February 2016</td>
-
-</tr>
+<div class="module-card">
 
 
+<div class="module-icon">
 
-<tr>
+👤
 
-<td>VIC-003</td>
-
-<td>Julian Lee</td>
-
-<td>25 April 2016</td>
-
-</tr>
+</div>
 
 
-
-<tr>
-
-<td>VIC-004</td>
-
-<td>Jayden Lee</td>
-
-<td>5 May 2016</td>
-
-</tr>
+<h3>
+Victim Database
+</h3>
 
 
+<p>
 
-<tr>
+Access complete victim records, incident dates, and case-related information.
 
-<td>VIC-005</td>
-
-<td>Hunter</td>
-
-<td>15 July 2016</td>
-
-</tr>
-
-
-
-</table>
-
-
-<br>
+</p>
 
 
 <a href="victims.html">
 
-→ Open Complete Victim Database
+Open Victim Records →
 
 </a>
-
 
 
 </div>
@@ -701,49 +977,35 @@ Victim Records
 
 
 
+<div class="module-card">
 
-<div class="card">
+
+<div class="module-icon">
+
+🔎
+
+</div>
 
 
-<h2>
+<h3>
 Evidence Registry
-</h2>
+</h3>
 
 
+<p>
 
-<ul>
+Review collected evidence, investigation findings, and evidence classification.
 
-
-<li>
-🎰 Casino Chip - Signature Evidence
-</li>
-
-
-<li>
-🎵 Portable MP3 Player - Pattern Evidence
-</li>
-
-
-<li>
-💉 Insulin Injection Evidence - Cause Related Evidence
-</li>
-
-
-</ul>
-
-
-
-<br>
+</p>
 
 
 <a href="evidence.html">
 
-→ Open Complete Evidence Registry
+Open Evidence Registry →
 
 </a>
 
 
-
 </div>
 
 
@@ -753,143 +1015,33 @@ Evidence Registry
 
 
 
+<div class="module-card">
 
-<div class="card">
+
+<div class="module-icon">
+
+📅
+
+</div>
 
 
-<h2>
+<h3>
 Investigation Timeline
-</h2>
+</h3>
 
 
+<p>
 
-<div class="timeline">
+View chronological records of incidents and investigation progress.
 
-
-
-<div class="event">
-
-
-<div class="date">
-25 January 2016
-</div>
-
-
-Rico case recorded.
-
-</div>
-
-
-
-
-
-<div class="event">
-
-
-<div class="date">
-5 February 2016
-</div>
-
-
-Jeanne Jun case recorded.
-
-</div>
-
-
-
-
-
-<div class="event">
-
-
-<div class="date">
-25 April 2016
-</div>
-
-
-Julian Lee case recorded.
-
-</div>
-
-
-
-
-
-<div class="event">
-
-
-<div class="date">
-5 May 2016
-</div>
-
-
-Jayden Lee case recorded.
-
-</div>
-
-
-
-
-
-<div class="event">
-
-
-<div class="date">
-15 July 2016
-</div>
-
-
-Hunter case recorded.
-
-</div>
-
-
-
-
-
-<div class="event">
-
-
-<div class="date">
-25 August 2016
-</div>
-
-
-Suspect met potential victim but decided not to continue the act.
-
-</div>
-
-
-
-
-
-<div class="event">
-
-
-<div class="date">
-26 August 2016
-</div>
-
-
-Investigation closed after suspect surrender.
-
-</div>
-
-
-
-</div>
-
-
-
-<br>
+</p>
 
 
 <a href="timeline.html">
 
-→ Open Full Investigation Timeline
+Open Timeline →
 
 </a>
-
 
 
 </div>
@@ -901,13 +1053,69 @@ Investigation closed after suspect surrender.
 
 
 
+<div class="module-card">
 
-<div class="card">
+
+<div class="module-icon">
+
+📂
+
+</div>
 
 
-<h2>
+<h3>
 Document Archive
+</h3>
+
+
+<p>
+
+Access official investigation reports and archived case documents.
+
+</p>
+
+
+<a href="documents.html">
+
+Open Document Center →
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</section>
+<!-- =========================
+     OFFICIAL DOCUMENT ARCHIVE
+========================= -->
+
+
+<section class="card">
+
+
+<h2 class="card-title">
+
+Official Case Documents
+
 </h2>
+
+
+
+<p>
+
+Access authorized investigation documents related to The Grand Casino Murder case.
+
+</p>
+
 
 
 
@@ -919,6 +1127,11 @@ Document Archive
 
 <th>
 Document
+</th>
+
+
+<th>
+Description
 </th>
 
 
@@ -942,10 +1155,15 @@ Access
 
 
 <td>
+Crime Reconstruction Report
+</td>
+
+
+<td>
 
 <a href="documents.html">
 
-OPEN DOCUMENT CENTER
+View File →
 
 </a>
 
@@ -953,6 +1171,8 @@ OPEN DOCUMENT CENTER
 
 
 </tr>
+
+
 
 
 
@@ -967,10 +1187,15 @@ OPEN DOCUMENT CENTER
 
 
 <td>
+Crime Chronology Report
+</td>
+
+
+<td>
 
 <a href="documents.html">
 
-OPEN DOCUMENT CENTER
+View File →
 
 </a>
 
@@ -987,18 +1212,7 @@ OPEN DOCUMENT CENTER
 
 
 
-<br>
-
-
-<a href="documents.html">
-
-→ Access Case Document Archive
-
-</a>
-
-
-
-</div>
+</section>
 
 
 
@@ -1007,104 +1221,59 @@ OPEN DOCUMENT CENTER
 
 
 
+<!-- =========================
+     CASE INFORMATION
+========================= -->
 
-<div class="card">
+
+<section class="card">
 
 
-<h2>
-System Data Repository
+<h2 class="card-title">
+
+System Information
+
 </h2>
-
-
-
-
-<ul>
-
-
-
-<li>
-
-<a href="data/cases.json">
-
-🗃 Case Database (JSON)
-
-</a>
-
-</li>
-
-
-
-
-
-<li>
-
-<a href="data/victims.json">
-
-👤 Victim Records (JSON)
-
-</a>
-
-</li>
-
-
-
-
-
-<li>
-
-<a href="data/suspects.json">
-
-🕵 Suspect Records (JSON)
-
-</a>
-
-</li>
-
-
-
-
-
-<li>
-
-<a href="data/evidence.json">
-
-🔎 Evidence Records (JSON)
-
-</a>
-
-</li>
-
-
-
-
-
-<li>
-
-<a href="data/timeline.json">
-
-📅 Timeline Records (JSON)
-
-</a>
-
-</li>
-
-
-
-
-</ul>
-
 
 
 
 <p>
 
-Raw investigation data repository for system integration.
+<b>Department:</b>
+Gangnam Police Department
 
 </p>
 
 
 
-</div>
+<p>
+
+<b>Division:</b>
+Major Crime Investigation Division
+
+</p>
+
+
+
+<p>
+
+<b>System:</b>
+Digital Investigation Management Portal
+
+</p>
+
+
+
+<p>
+
+<b>Access Level:</b>
+Confidential Case Archive
+
+</p>
+
+
+
+</section>
 
 
 
@@ -1120,7 +1289,13 @@ Raw investigation data repository for system integration.
 
 
 
-<div class="footer">
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+
+<footer class="footer">
 
 
 Gangnam Police Department © 2016
@@ -1129,8 +1304,13 @@ Gangnam Police Department © 2016
 
 Digital Investigation Management System
 
+<br><br>
 
-</div>
+CONFIDENTIAL LAW ENFORCEMENT DATABASE
+
+
+</footer>
+
 
 
 
