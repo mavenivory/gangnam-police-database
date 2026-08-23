@@ -27,15 +27,3 @@ The database reconstructs a serial murder investigation based on:
 | BAB IV | Rekonstruksi Mekanisme Pembunuhan |
 | BAB V | Kronologi Tindak Pidana Pembunuhan |
 
-
-## Database Structure
-
-Coming soon:
-
-- Cases
-- Suspects
-- Victims
-- Evidence
-- Crime Scene
-- Timeline
-- Documents Repository
