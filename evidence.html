@@ -5,72 +5,272 @@
 
 <meta charset="UTF-8">
 
-<title>Evidence Registry - The Grand Casino Murder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Evidence Registry | The Grand Casino Murder</title>
 
 
 <style>
 
+
+*{
+box-sizing:border-box;
+}
+
+
+
 body{
+
 margin:0;
-font-family:Segoe UI,Arial;
+
+font-family:'Segoe UI',Arial,sans-serif;
+
 background:#0b1120;
+
 color:white;
+
 padding:35px;
+
 }
 
-h1{
-color:#fbbf24;
-}
 
-.card{
 
-background:#1e293b;
+/* HEADER */
+
+.header{
+
+background:linear-gradient(135deg,#111827,#020617);
+
 padding:25px;
-margin:20px 0;
+
+border-bottom:3px solid #dc2626;
+
 border-radius:12px;
 
 }
 
+
+
+.header h1{
+
+margin:0;
+
+color:#fbbf24;
+
+font-size:30px;
+
+}
+
+
+
+.header p{
+
+color:#cbd5e1;
+
+}
+
+
+
 .badge{
 
-background:#991b1b;
-padding:5px 15px;
+display:inline-block;
+
+background:#166534;
+
+padding:6px 15px;
+
 border-radius:20px;
 
-}
-
-
-a{
-color:#60a5fa;
-text-decoration:none;
-}
-
-
-.icon{
-
-font-size:40px;
+font-size:13px;
 
 }
+
+
 
 
 .back{
 
-margin-bottom:20px;
+display:inline-block;
+
+margin-bottom:25px;
+
+color:#60a5fa;
+
+text-decoration:none;
+
+font-weight:bold;
 
 }
 
 
+
+
+.card{
+
+background:#1e293b;
+
+padding:25px;
+
+margin:25px 0;
+
+border-radius:12px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+
+
+.card h2{
+
+color:#fbbf24;
+
+margin-top:10px;
+
+}
+
+
+
+.icon{
+
+font-size:45px;
+
+}
+
+
+
+.info{
+
+color:#cbd5e1;
+
+line-height:1.6;
+
+}
+
+
+
+
+
+.footer{
+
+margin-top:40px;
+
+background:#020617;
+
+padding:20px;
+
+text-align:center;
+
+color:#94a3b8;
+
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+
+body{
+
+padding:15px;
+
+}
+
+
+
+.header{
+
+padding:20px;
+
+}
+
+
+
+.header h1{
+
+font-size:24px;
+
+}
+
+
+
+.card{
+
+padding:18px;
+
+margin:15px 0;
+
+}
+
+
+
+.icon{
+
+font-size:38px;
+
+}
+
+
+}
+
+
+
+@media(max-width:400px){
+
+
+.header h1{
+
+font-size:20px;
+
+}
+
+
+.card h2{
+
+font-size:18px;
+
+}
+
+
+.badge{
+
+font-size:11px;
+
+}
+
+
+}
+
+
+
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
+
+
 <a class="back" href="index.html">
+
 ← Back to Dashboard
+
 </a>
+
+
+
+
+
+
+
+<div class="header">
 
 
 <h1>
@@ -83,28 +283,60 @@ Case: <b>The Grand Casino Murder</b>
 </p>
 
 
+<span class="badge">
+CONFIRMED EVIDENCE DATABASE
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
 
 <div class="card">
+
 
 <div class="icon">
 🎰
 </div>
 
+
+
 <h2>
 EVD-001 | Casino Chip
 </h2>
 
-<p>
-<b>Category:</b> Signature Evidence
+
+
+<p class="info">
+
+<b>Category:</b>
+<br>
+
+Signature Evidence
+
 </p>
 
-<p>
+
+
+<p class="info">
+
 Casino chip discovered on victims as a symbolic mark associated with the perpetrator's pattern.
+
 </p>
+
+
 
 <span class="badge">
 CONFIRMED
 </span>
+
+
 
 </div>
 
@@ -112,25 +344,42 @@ CONFIRMED
 
 
 
+
+
+
+
 <div class="card">
+
 
 <div class="icon">
 🎵
 </div>
 
 
+
 <h2>
 EVD-002 | Portable MP3 Player
 </h2>
 
-<p>
-<b>Category:</b> Pattern Evidence
+
+
+<p class="info">
+
+<b>Category:</b>
+<br>
+
+Pattern Evidence
+
 </p>
 
 
-<p>
+
+<p class="info">
+
 Portable music player found near victims. The same song pattern appeared repeatedly in related incidents.
+
 </p>
+
 
 
 <span class="badge">
@@ -138,7 +387,10 @@ CONFIRMED
 </span>
 
 
+
 </div>
+
+
 
 
 
@@ -148,9 +400,11 @@ CONFIRMED
 
 <div class="card">
 
+
 <div class="icon">
 💉
 </div>
+
 
 
 <h2>
@@ -158,14 +412,24 @@ EVD-003 | Insulin Injection Evidence
 </h2>
 
 
-<p>
-<b>Category:</b> Cause Related Evidence
+
+<p class="info">
+
+<b>Category:</b>
+<br>
+
+Cause Related Evidence
+
 </p>
 
 
-<p>
+
+<p class="info">
+
 Evidence connected to insulin administration identified as the direct cause related to victim deaths.
+
 </p>
+
 
 
 <span class="badge">
@@ -173,7 +437,27 @@ CONFIRMED
 </span>
 
 
+
 </div>
+
+
+
+
+
+
+
+
+<div class="footer">
+
+Gangnam Police Department © 2016
+
+<br>
+
+Digital Investigation Management System
+
+</div>
+
+
 
 
 
