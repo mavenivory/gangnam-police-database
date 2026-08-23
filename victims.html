@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-
 
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<title>Victim Database | The Grand Casino Murder</title>
+<title>
+Gangnam Police Department | Victim Database
+</title>
 
 
 
@@ -18,7 +18,9 @@
 
 
 *{
+
 box-sizing:border-box;
+
 }
 
 
@@ -29,54 +31,88 @@ margin:0;
 
 font-family:'Segoe UI',Arial,sans-serif;
 
-background:#0b1120;
+background:#050b18;
 
 color:white;
 
-padding:35px;
+}
+
+
+
+a{
+
+text-decoration:none;
+
+color:inherit;
 
 }
 
 
 
 
+
+/* HEADER */
 
 .header{
 
-background:linear-gradient(135deg,#111827,#020617);
+background:
+linear-gradient(135deg,#020617,#111827);
 
-padding:25px;
+padding:35px 60px;
 
-border-bottom:3px solid #dc2626;
+border-bottom:4px solid #dc2626;
 
-border-radius:12px;
+display:flex;
+
+align-items:center;
+
+gap:25px;
 
 }
 
 
 
+.logo{
+
+width:75px;
+
+height:75px;
+
+background:#1e3a8a;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:35px;
+
+border:3px solid #fbbf24;
+
+}
 
 
-.header h1{
+
+.header-text h1{
 
 margin:0;
 
-color:#fbbf24;
-
-font-size:30px;
+font-size:32px;
 
 }
 
 
 
-
-.header p{
+.header-text p{
 
 color:#cbd5e1;
 
+margin:8px 0;
+
 }
-
-
 
 
 
@@ -84,29 +120,13 @@ color:#cbd5e1;
 
 display:inline-block;
 
-background:#166534;
+background:#991b1b;
 
-padding:6px 15px;
+padding:7px 18px;
 
 border-radius:20px;
 
-font-size:13px;
-
-}
-
-
-
-
-
-.back{
-
-display:inline-block;
-
-margin-bottom:25px;
-
-color:#60a5fa;
-
-text-decoration:none;
+font-size:12px;
 
 font-weight:bold;
 
@@ -116,43 +136,57 @@ font-weight:bold;
 
 
 
-.card{
-
-background:#1e293b;
-
-padding:25px;
-
-margin:25px 0;
-
-border-radius:12px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.35);
-
-transition:.3s;
-
-}
+/* NAVBAR */
 
 
+.navbar{
 
+background:#020617;
 
+display:flex;
 
-.card:hover{
+gap:30px;
 
-transform:translateY(-3px);
+padding:15px 60px;
 
-background:#263449;
+border-bottom:1px solid #1e293b;
 
 }
 
 
 
+.navbar a{
+
+color:#cbd5e1;
+
+font-weight:600;
+
+font-size:14px;
+
+}
 
 
-.card h2{
+
+.navbar a:hover{
 
 color:#fbbf24;
 
-margin-top:0;
+}
+
+
+
+
+
+/* CONTAINER */
+
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:40px;
 
 }
 
@@ -160,23 +194,41 @@ margin-top:0;
 
 
 
-.label{
+/* TITLE BANNER */
 
-color:#94a3b8;
+
+.page-banner{
+
+background:
+linear-gradient(135deg,#172554,#111827);
+
+border-left:5px solid #dc2626;
+
+padding:35px;
+
+border-radius:15px;
+
+margin-bottom:30px;
 
 }
 
 
 
+.page-banner h2{
 
+font-size:32px;
 
-.value{
-
-color:#e2e8f0;
+margin:0 0 10px;
 
 }
 
 
+
+.page-banner p{
+
+color:#cbd5e1;
+
+}
 
 
 
@@ -184,13 +236,109 @@ color:#e2e8f0;
 
 display:inline-block;
 
-background:#991b1b;
+background:#166534;
 
-padding:5px 15px;
+padding:8px 20px;
 
 border-radius:20px;
 
 font-size:13px;
+
+font-weight:bold;
+
+}
+
+
+
+
+
+/* VICTIM CARD */
+
+
+.victim-card{
+
+background:#111827;
+
+border:1px solid #1e293b;
+
+padding:25px;
+
+border-radius:15px;
+
+margin-bottom:25px;
+
+box-shadow:
+0 15px 30px rgba(0,0,0,.35);
+
+}
+
+
+
+.victim-card:hover{
+
+border-color:#fbbf24;
+
+}
+
+
+
+
+
+.victim-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+
+
+.victim-id{
+
+color:#38bdf8;
+
+font-weight:bold;
+
+}
+
+
+
+
+
+.victim-card h3{
+
+color:#fbbf24;
+
+font-size:24px;
+
+margin:10px 0;
+
+}
+
+
+
+
+
+.info-label{
+
+color:#94a3b8;
+
+font-size:14px;
+
+}
+
+
+
+.info-value{
+
+font-size:16px;
+
+margin-bottom:15px;
 
 }
 
@@ -200,45 +348,68 @@ font-size:13px;
 
 .footer{
 
-margin-top:40px;
-
 background:#020617;
 
-padding:20px;
+padding:25px;
 
 text-align:center;
 
 color:#94a3b8;
 
+margin-top:40px;
+
 }
-
-
-
-
-
+   
 /* RESPONSIVE */
 
 
-@media(max-width:768px){
-
-
-body{
-
-padding:15px;
-
-}
-
+@media(max-width:900px){
 
 
 .header{
 
-padding:20px;
+padding:25px;
+
+}
+
+
+.navbar{
+
+padding:15px 25px;
+
+flex-wrap:wrap;
 
 }
 
 
 
-.header h1{
+.container{
+
+padding:25px;
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.header{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+
+.header-text h1{
 
 font-size:24px;
 
@@ -246,11 +417,47 @@ font-size:24px;
 
 
 
-.card{
+.navbar{
 
-padding:18px;
+flex-direction:column;
 
-margin:15px 0;
+gap:15px;
+
+}
+
+
+
+.container{
+
+padding:15px;
+
+}
+
+
+
+.page-banner h2{
+
+font-size:24px;
+
+}
+
+
+
+.victim-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:10px;
+
+}
+
+
+
+.victim-card{
+
+padding:20px;
 
 }
 
@@ -259,35 +466,6 @@ margin:15px 0;
 
 
 
-
-
-@media(max-width:400px){
-
-
-.header h1{
-
-font-size:20px;
-
-}
-
-
-
-.card h2{
-
-font-size:18px;
-
-}
-
-
-
-.badge{
-
-font-size:11px;
-
-}
-
-
-}
 
 
 
@@ -305,34 +483,229 @@ font-size:11px;
 
 
 
-<a class="back" href="index.html">
 
-← Back to Dashboard
+<!-- =========================
+     POLICE HEADER
+========================= -->
 
+
+<header class="header">
+
+
+<div class="logo">
+
+🚔
+
+</div>
+
+
+
+
+<div class="header-text">
+
+
+<h1>
+Gangnam Police Department
+</h1>
+
+
+
+<p>
+Major Crime Investigation Division
+</p>
+
+
+
+<span class="badge">
+CONFIDENTIAL CASE MANAGEMENT SYSTEM
+</span>
+
+
+</div>
+
+
+
+</header>
+
+
+
+
+
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+
+<nav class="navbar">
+
+
+<a href="index.html">
+Dashboard
 </a>
 
 
 
+<a href="victims.html">
+Victims
+</a>
+
+
+
+<a href="evidence.html">
+Evidence
+</a>
+
+
+
+<a href="timeline.html">
+Timeline
+</a>
+
+
+
+<a href="documents.html">
+Documents
+</a>
+
+
+
+</nav>
 
 
 
 
 
-<div class="header">
 
 
-<h1>
-👤 Victim Database
-</h1>
+
+<!-- =========================
+     MAIN CONTAINER
+========================= -->
+
+
+<div class="container">
+
+
+
+
+
+
+
+
+<!-- =========================
+     PAGE TITLE
+========================= -->
+
+
+<section class="page-banner">
 
 
 <p>
-Case: <b>The Grand Casino Murder</b>
+CASE MODULE
 </p>
 
 
-<span class="badge">
-VICTIM RECORD DATABASE
+
+<h2>
+👤 Victim Database
+</h2>
+
+
+
+<p>
+Case:
+<b>
+The Grand Casino Murder
+</b>
+</p>
+
+
+
+<p>
+Case ID:
+<b>
+GPD-2016-INS-001
+</b>
+</p>
+
+
+
+<span class="status">
+
+5 CONFIRMED VICTIMS
+
+</span>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+     DATABASE SUMMARY
+========================= -->
+
+
+<section class="victim-card">
+
+
+<h3>
+Victim Records Overview
+</h3>
+
+
+<p>
+
+This database contains confirmed victim profiles associated with The Grand Casino Murder investigation.
+
+</p>
+
+
+<p>
+
+Each record includes incident date and cause of death information.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+     VICTIM RECORDS
+========================= -->
+
+
+
+<section class="victim-card">
+
+
+<div class="victim-header">
+
+
+<span class="victim-id">
+
+VIC-001
+
+</span>
+
+
+<span class="status">
+
+CONFIRMED
+
 </span>
 
 
@@ -340,43 +713,66 @@ VICTIM RECORD DATABASE
 
 
 
+<h3>
+Rico
+</h3>
 
 
 
-
-
-
-<div class="card">
-
-
-<h2>
-VIC-001 | Rico
-</h2>
-
-
-<p class="label">
+<p class="info-label">
 Incident Date
 </p>
 
 
-<p class="value">
+<p class="info-value">
+
 25 January 2016
+
 </p>
 
 
 
-<p class="label">
+
+<p class="info-label">
 Cause of Death
 </p>
 
 
-<p class="value">
+<p class="info-value">
+
 Insulin intoxication
+
 </p>
 
 
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="victim-card">
+
+
+<div class="victim-header">
+
+
+<span class="victim-id">
+
+VIC-002
+
+</span>
+
+
 <span class="status">
-CONFIRMED VICTIM
+
+CONFIRMED
+
 </span>
 
 
@@ -384,43 +780,66 @@ CONFIRMED VICTIM
 
 
 
+<h3>
+Jeanne Jun
+</h3>
 
 
 
-
-
-
-<div class="card">
-
-
-<h2>
-VIC-002 | Jeanne Jun
-</h2>
-
-
-<p class="label">
+<p class="info-label">
 Incident Date
 </p>
 
 
-<p class="value">
+<p class="info-value">
+
 5 February 2016
+
 </p>
 
 
 
-<p class="label">
+
+<p class="info-label">
 Cause of Death
 </p>
 
 
-<p class="value">
+<p class="info-value">
+
 Insulin injection complication
+
 </p>
 
 
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="victim-card">
+
+
+<div class="victim-header">
+
+
+<span class="victim-id">
+
+VIC-003
+
+</span>
+
+
 <span class="status">
-CONFIRMED VICTIM
+
+CONFIRMED
+
 </span>
 
 
@@ -428,43 +847,66 @@ CONFIRMED VICTIM
 
 
 
+<h3>
+Julian Lee
+</h3>
 
 
 
-
-
-
-<div class="card">
-
-
-<h2>
-VIC-003 | Julian Lee
-</h2>
-
-
-<p class="label">
+<p class="info-label">
 Incident Date
 </p>
 
 
-<p class="value">
+<p class="info-value">
+
 25 April 2016
+
 </p>
 
 
 
-<p class="label">
+
+<p class="info-label">
 Cause of Death
 </p>
 
 
-<p class="value">
+<p class="info-value">
+
 Insulin intoxication
+
 </p>
 
 
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="victim-card">
+
+
+<div class="victim-header">
+
+
+<span class="victim-id">
+
+VIC-004
+
+</span>
+
+
 <span class="status">
-CONFIRMED VICTIM
+
+CONFIRMED
+
 </span>
 
 
@@ -472,43 +914,66 @@ CONFIRMED VICTIM
 
 
 
+<h3>
+Jayden Lee
+</h3>
 
 
 
-
-
-
-<div class="card">
-
-
-<h2>
-VIC-004 | Jayden Lee
-</h2>
-
-
-<p class="label">
+<p class="info-label">
 Incident Date
 </p>
 
 
-<p class="value">
+<p class="info-value">
+
 5 May 2016
+
 </p>
 
 
 
-<p class="label">
+
+<p class="info-label">
 Cause of Death
 </p>
 
 
-<p class="value">
+<p class="info-value">
+
 Insulin intoxication
+
 </p>
 
 
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="victim-card">
+
+
+<div class="victim-header">
+
+
+<span class="victim-id">
+
+VIC-005
+
+</span>
+
+
 <span class="status">
-CONFIRMED VICTIM
+
+CONFIRMED
+
 </span>
 
 
@@ -516,44 +981,53 @@ CONFIRMED VICTIM
 
 
 
+<h3>
+Hunter
+</h3>
 
 
 
-
-
-
-<div class="card">
-
-
-<h2>
-VIC-005 | Hunter
-</h2>
-
-
-<p class="label">
+<p class="info-label">
 Incident Date
 </p>
 
 
-<p class="value">
+<p class="info-value">
+
 15 July 2016
+
 </p>
 
 
 
-<p class="label">
+
+<p class="info-label">
 Cause of Death
 </p>
 
 
-<p class="value">
+<p class="info-value">
+
 Insulin intoxication
+
 </p>
 
 
-<span class="status">
-CONFIRMED VICTIM
-</span>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 
 
 </div>
@@ -564,8 +1038,7 @@ CONFIRMED VICTIM
 
 
 
-
-<div class="footer">
+<footer class="footer">
 
 
 Gangnam Police Department © 2016
@@ -574,8 +1047,12 @@ Gangnam Police Department © 2016
 
 Digital Investigation Management System
 
+<br><br>
 
-</div>
+CONFIDENTIAL LAW ENFORCEMENT DATABASE
+
+
+</footer>
 
 
 
