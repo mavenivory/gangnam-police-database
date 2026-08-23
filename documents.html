@@ -7,14 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Document Archive | The Grand Casino Murder</title>
+
+<title>
+Gangnam Police Department | Document Archive
+</title>
 
 
 <style>
 
 
 *{
+
 box-sizing:border-box;
+
 }
 
 
@@ -25,138 +30,9 @@ margin:0;
 
 font-family:'Segoe UI',Arial,sans-serif;
 
-background:#0b1120;
+background:#050914;
 
 color:white;
-
-padding:35px;
-
-}
-
-
-
-/* HEADER */
-
-.header{
-
-background:linear-gradient(135deg,#111827,#020617);
-
-padding:25px;
-
-border-bottom:3px solid #dc2626;
-
-border-radius:12px;
-
-}
-
-
-
-.header h1{
-
-margin:0;
-
-color:#fbbf24;
-
-font-size:30px;
-
-}
-
-
-
-.header p{
-
-color:#cbd5e1;
-
-}
-
-
-
-
-
-.back{
-
-display:inline-block;
-
-margin-bottom:25px;
-
-color:#60a5fa;
-
-text-decoration:none;
-
-font-weight:bold;
-
-}
-
-
-
-
-
-.card{
-
-background:#1e293b;
-
-padding:25px;
-
-border-radius:12px;
-
-margin:25px 0;
-
-box-shadow:0 10px 25px rgba(0,0,0,.35);
-
-}
-
-
-
-.card h2{
-
-color:#fbbf24;
-
-margin-top:0;
-
-}
-
-
-
-
-
-.info{
-
-color:#cbd5e1;
-
-line-height:1.6;
-
-}
-
-
-
-
-button{
-
-
-background:#2563eb;
-
-color:white;
-
-padding:12px 25px;
-
-border:none;
-
-border-radius:8px;
-
-cursor:pointer;
-
-font-size:15px;
-
-font-weight:bold;
-
-
-}
-
-
-
-button:hover{
-
-background:#1d4ed8;
 
 }
 
@@ -164,47 +40,554 @@ background:#1d4ed8;
 
 a{
 
-color:white;
-
 text-decoration:none;
+
+color:inherit;
 
 }
 
+
+
+
+
+/* HEADER */
+
+
+.header{
+
+
+background:
+
+linear-gradient(
+135deg,
+#020617,
+#111827
+);
+
+
+padding:45px 70px;
+
+
+border-bottom:3px solid #dc2626;
+
+
+display:flex;
+
+align-items:center;
+
+gap:30px;
+
+
+}
+
+
+
+
+
+.logo{
+
+
+width:90px;
+
+height:90px;
+
+
+border-radius:50%;
+
+
+background:#172554;
+
+
+border:3px solid #fbbf24;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+font-size:42px;
+
+
+}
+
+
+
+
+
+.header-content h1{
+
+
+margin:0;
+
+
+font-size:34px;
+
+
+letter-spacing:2px;
+
+
+}
+
+
+
+
+
+.header-content p{
+
+
+color:#cbd5e1;
+
+
+margin:10px 0;
+
+
+}
 
 
 
 
 .badge{
 
+
 display:inline-block;
 
-background:#166534;
 
-padding:6px 15px;
+background:#7f1d1d;
 
-border-radius:20px;
 
-font-size:13px;
+padding:8px 20px;
+
+
+border-radius:30px;
+
+
+font-size:12px;
+
+
+font-weight:bold;
+
 
 }
 
 
 
+
+
+
+
+/* NAV */
+
+
+.navbar{
+
+
+background:#020617;
+
+
+padding:18px 70px;
+
+
+display:flex;
+
+
+gap:35px;
+
+
+border-bottom:1px solid #1e293b;
+
+
+}
+
+
+
+.navbar a{
+
+
+color:#cbd5e1;
+
+
+font-weight:600;
+
+
+}
+
+
+
+.navbar a:hover{
+
+
+color:#fbbf24;
+
+
+}
+
+
+
+
+
+
+
+
+/* CONTAINER */
+
+
+.container{
+
+
+max-width:1100px;
+
+
+margin:auto;
+
+
+padding:50px 40px;
+
+
+}
+
+
+
+
+
+
+
+/* BANNER */
+
+
+.banner{
+
+
+background:
+
+linear-gradient(
+135deg,
+#172554,
+#111827
+);
+
+
+border-left:5px solid #dc2626;
+
+
+padding:40px;
+
+
+border-radius:15px;
+
+
+margin-bottom:35px;
+
+
+}
+
+
+
+.banner h2{
+
+
+font-size:36px;
+
+
+margin:15px 0;
+
+
+}
+
+
+
+.banner p{
+
+
+color:#cbd5e1;
+
+
+}
+
+
+
+
+
+.status{
+
+
+display:inline-block;
+
+
+background:#166534;
+
+
+padding:8px 20px;
+
+
+border-radius:20px;
+
+
+font-weight:bold;
+
+
+font-size:13px;
+
+
+}
+
+
+
+
+
+/* DOCUMENT CARD */
+
+
+.document-grid{
+
+
+display:grid;
+
+
+grid-template-columns:repeat(2,1fr);
+
+
+gap:25px;
+
+
+}
+
+
+
+
+.document-card{
+
+
+background:#111827;
+
+
+border:1px solid #1e293b;
+
+
+padding:30px;
+
+
+border-radius:15px;
+
+
+transition:.3s;
+
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+
+}
+
+
+
+.document-card:hover{
+
+
+border-color:#fbbf24;
+
+
+transform:translateY(-5px);
+
+
+}
+
+
+
+.document-icon{
+
+
+font-size:45px;
+
+
+}
+
+
+
+.document-card h3{
+
+
+color:#fbbf24;
+
+
+font-size:22px;
+
+
+}
+
+/* DOCUMENT ACCESS */
+
+
+.document-card p{
+
+color:#cbd5e1;
+
+line-height:1.7;
+
+}
+
+
+
+
+
+.document-meta{
+
+
+background:#020617;
+
+
+padding:15px;
+
+
+border-radius:10px;
+
+
+margin:20px 0;
+
+
+border-left:3px solid #1d4ed8;
+
+
+}
+
+
+
+.document-meta span{
+
+
+display:block;
+
+
+color:#94a3b8;
+
+
+font-size:13px;
+
+
+margin-bottom:5px;
+
+
+}
+
+
+
+.document-meta strong{
+
+
+color:#f8fafc;
+
+
+}
+
+
+
+
+
+
+
+.access-button{
+
+
+display:inline-block;
+
+
+background:#1d4ed8;
+
+
+padding:12px 25px;
+
+
+border-radius:8px;
+
+
+font-weight:bold;
+
+
+margin-top:15px;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.access-button:hover{
+
+
+background:#2563eb;
+
+
+}
+
+
+
+
+
+/* SECURITY NOTICE */
+
+
+.notice{
+
+
+background:#111827;
+
+
+border-left:5px solid #fbbf24;
+
+
+padding:25px;
+
+
+border-radius:12px;
+
+
+margin-top:30px;
+
+
+}
+
+
+
+.notice h3{
+
+
+color:#fbbf24;
+
+
+}
+
+
+
+
+
+/* FOOTER */
 
 
 .footer{
 
-margin-top:40px;
 
 background:#020617;
 
-padding:20px;
+
+padding:30px;
+
 
 text-align:center;
 
+
 color:#94a3b8;
 
+
+margin-top:40px;
+
+
 }
+
 
 
 
@@ -213,51 +596,20 @@ color:#94a3b8;
 /* RESPONSIVE */
 
 
-@media(max-width:768px){
-
-
-body{
-
-padding:15px;
-
-}
+@media(max-width:800px){
 
 
 
 .header{
 
-padding:20px;
 
-}
-
+padding:30px;
 
 
-.header h1{
-
-font-size:24px;
-
-}
+flex-direction:column;
 
 
-
-.card{
-
-padding:18px;
-
-margin:15px 0;
-
-}
-
-
-
-button{
-
-width:100%;
-
-padding:14px;
-
-}
-
+text-align:center;
 
 
 }
@@ -265,29 +617,51 @@ padding:14px;
 
 
 
-@media(max-width:400px){
+.navbar{
 
 
-.header h1{
+padding:20px 30px;
 
-font-size:20px;
+
+flex-direction:column;
+
+
+gap:15px;
+
 
 }
 
 
 
-.card h2{
+.container{
 
-font-size:18px;
+
+padding:25px 15px;
+
+
+}
+
+
+
+.banner h2{
+
+
+font-size:28px;
+
 
 }
 
 
-button{
 
-font-size:14px;
+
+.document-grid{
+
+
+grid-template-columns:1fr;
+
 
 }
+
 
 
 }
@@ -297,45 +671,109 @@ font-size:14px;
 </style>
 
 
-</head>
 
 
+<!-- =========================
+     DOCUMENT RECORDS
+========================= -->
 
 
-<body>
-
-
-
-
-
-<a class="back" href="index.html">
-
-← Back to Dashboard
-
-</a>
+<section class="document-grid">
 
 
 
 
 
-<div class="header">
 
 
-<h1>
-📂 Case Document Archive
-</h1>
+<div class="document-card">
+
+
+<div class="document-icon">
+
+📄
+
+</div>
+
+
+
+
+<h3>
+
+280816_BAB IV.pdf
+
+</h3>
+
+
+
 
 
 <p>
-The Grand Casino Murder Investigation Files
+
+Crime Reconstruction Report
+
 </p>
 
 
-<span class="badge">
-CONFIDENTIAL DOCUMENT CENTER
+
+
+
+<div class="document-meta">
+
+
+<span>
+
+DOCUMENT TYPE
+
 </span>
 
 
+<strong>
+
+Investigation Reconstruction Report
+
+</strong>
+
+
+
+<br><br>
+
+
+
+<span>
+
+CLASSIFICATION
+
+</span>
+
+
+<strong>
+
+CONFIDENTIAL
+
+</strong>
+
+
+
+<br><br>
+
+
+
+<span>
+
+ACCESS FORMAT
+
+</span>
+
+
+<strong>
+
+PDF DOCUMENT
+
+</strong>
+
+
+
 </div>
 
 
@@ -343,51 +781,26 @@ CONFIDENTIAL DOCUMENT CENTER
 
 
 
+<p>
 
-
-<div class="card">
-
-
-<h2>
-280816_BAB IV.pdf
-</h2>
-
-
-
-<p class="info">
-
-Document Type:
-
-<br>
-
-<b>
-Crime Reconstruction Report
-</b>
+Contains reconstruction analysis of the criminal mechanism, investigation findings, and official case examination records.
 
 </p>
 
 
 
-<p class="info">
-
-Contains reconstruction of the murder mechanism and investigation findings.
-
-</p>
 
 
 
-<a href="280816_BAB%20IV.pdf" download>
+<a class="access-button" href="280816_BAB%20IV.pdf" download>
 
-<button>
-
-⬇ Download BAB IV
-
-</button>
+DOWNLOAD DOCUMENT
 
 </a>
 
 
 
+
 </div>
 
 
@@ -398,46 +811,181 @@ Contains reconstruction of the murder mechanism and investigation findings.
 
 
 
-<div class="card">
 
 
-<h2>
+
+<div class="document-card">
+
+
+<div class="document-icon">
+
+📄
+
+</div>
+
+
+
+
+<h3>
+
 280816_BAB V.pdf
-</h2>
+
+</h3>
 
 
 
-<p class="info">
 
-Document Type:
 
-<br>
+<p>
 
-<b>
 Crime Chronology Report
-</b>
 
 </p>
 
 
 
-<p class="info">
 
-Contains chronological sequence of incidents and investigation timeline.
+
+<div class="document-meta">
+
+
+<span>
+
+DOCUMENT TYPE
+
+</span>
+
+
+<strong>
+
+Investigation Chronology Report
+
+</strong>
+
+
+
+<br><br>
+
+
+
+<span>
+
+CLASSIFICATION
+
+</span>
+
+
+<strong>
+
+CONFIDENTIAL
+
+</strong>
+
+
+
+<br><br>
+
+
+
+<span>
+
+ACCESS FORMAT
+
+</span>
+
+
+<strong>
+
+PDF DOCUMENT
+
+</strong>
+
+
+
+</div>
+
+
+
+
+
+
+<p>
+
+Contains chronological sequence of incidents, investigation progress, and official case timeline documentation.
 
 </p>
 
 
 
-<a href="280816_BAB%20V.pdf" download>
 
-<button>
 
-⬇ Download BAB V
 
-</button>
+<a class="access-button" href="280816_BAB%20V.pdf" download>
+
+DOWNLOAD DOCUMENT
 
 </a>
+
+
+
+
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     SECURITY NOTICE
+========================= -->
+
+
+<section class="notice">
+
+
+<h3>
+
+⚠ Security Notice
+
+</h3>
+
+
+
+
+<p>
+
+This document archive contains confidential investigation materials belonging to Gangnam Police Department.
+
+</p>
+
+
+
+<p>
+
+Documents are provided exclusively for authorized review purposes. Unauthorized copying, modification, or distribution is prohibited.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
 
 
 
@@ -450,15 +998,33 @@ Contains chronological sequence of incidents and investigation timeline.
 
 
 
-<div class="footer">
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+
+<footer class="footer">
+
 
 Gangnam Police Department © 2016
 
+
+<br><br>
+
+
+Major Crime Investigation Division
+
+
 <br>
 
-Digital Investigation Management System
 
-</div>
+Confidential Case Archive System
+
+
+</footer>
+
+
 
 
 
