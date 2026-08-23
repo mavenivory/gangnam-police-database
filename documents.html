@@ -5,49 +5,153 @@
 
 <meta charset="UTF-8">
 
-<title>Document Archive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document Archive | The Grand Casino Murder</title>
 
 
 <style>
 
 
+*{
+box-sizing:border-box;
+}
+
+
+
 body{
 
-font-family:Segoe UI,Arial;
+margin:0;
+
+font-family:'Segoe UI',Arial,sans-serif;
+
 background:#0b1120;
+
 color:white;
+
 padding:35px;
 
 }
 
 
-h1{
+
+/* HEADER */
+
+.header{
+
+background:linear-gradient(135deg,#111827,#020617);
+
+padding:25px;
+
+border-bottom:3px solid #dc2626;
+
+border-radius:12px;
+
+}
+
+
+
+.header h1{
+
+margin:0;
 
 color:#fbbf24;
 
+font-size:30px;
+
 }
+
+
+
+.header p{
+
+color:#cbd5e1;
+
+}
+
+
+
+
+
+.back{
+
+display:inline-block;
+
+margin-bottom:25px;
+
+color:#60a5fa;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+
+
 
 
 .card{
 
 background:#1e293b;
+
 padding:25px;
+
 border-radius:12px;
-margin:20px 0;
+
+margin:25px 0;
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
 
 }
+
+
+
+.card h2{
+
+color:#fbbf24;
+
+margin-top:0;
+
+}
+
+
+
+
+
+.info{
+
+color:#cbd5e1;
+
+line-height:1.6;
+
+}
+
+
 
 
 button{
 
+
 background:#2563eb;
+
 color:white;
-padding:10px 20px;
+
+padding:12px 25px;
+
 border:none;
+
 border-radius:8px;
+
 cursor:pointer;
 
+font-size:15px;
+
+font-weight:bold;
+
+
 }
+
 
 
 button:hover{
@@ -57,12 +161,137 @@ background:#1d4ed8;
 }
 
 
+
 a{
 
 color:white;
+
 text-decoration:none;
 
 }
+
+
+
+
+
+.badge{
+
+display:inline-block;
+
+background:#166534;
+
+padding:6px 15px;
+
+border-radius:20px;
+
+font-size:13px;
+
+}
+
+
+
+
+
+.footer{
+
+margin-top:40px;
+
+background:#020617;
+
+padding:20px;
+
+text-align:center;
+
+color:#94a3b8;
+
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:768px){
+
+
+body{
+
+padding:15px;
+
+}
+
+
+
+.header{
+
+padding:20px;
+
+}
+
+
+
+.header h1{
+
+font-size:24px;
+
+}
+
+
+
+.card{
+
+padding:18px;
+
+margin:15px 0;
+
+}
+
+
+
+button{
+
+width:100%;
+
+padding:14px;
+
+}
+
+
+
+}
+
+
+
+
+@media(max-width:400px){
+
+
+.header h1{
+
+font-size:20px;
+
+}
+
+
+
+.card h2{
+
+font-size:18px;
+
+}
+
+
+button{
+
+font-size:14px;
+
+}
+
+
+}
+
 
 
 </style>
@@ -72,14 +301,24 @@ text-decoration:none;
 
 
 
+
 <body>
 
 
 
-<a href="index.html">
+
+
+<a class="back" href="index.html">
+
 ← Back to Dashboard
+
 </a>
 
+
+
+
+
+<div class="header">
 
 
 <h1>
@@ -90,6 +329,17 @@ text-decoration:none;
 <p>
 The Grand Casino Murder Investigation Files
 </p>
+
+
+<span class="badge">
+CONFIDENTIAL DOCUMENT CENTER
+</span>
+
+
+</div>
+
+
+
 
 
 
@@ -103,28 +353,43 @@ The Grand Casino Murder Investigation Files
 </h2>
 
 
-<p>
+
+<p class="info">
+
 Document Type:
+
 <br>
-<b>Crime Reconstruction Report</b>
+
+<b>
+Crime Reconstruction Report
+</b>
+
 </p>
 
 
-<p>
+
+<p class="info">
+
 Contains reconstruction of the murder mechanism and investigation findings.
+
 </p>
+
 
 
 <a href="280816_BAB%20IV.pdf" download>
 
 <button>
+
 ⬇ Download BAB IV
+
 </button>
 
 </a>
 
 
+
 </div>
+
 
 
 
@@ -141,31 +406,59 @@ Contains reconstruction of the murder mechanism and investigation findings.
 </h2>
 
 
-<p>
+
+<p class="info">
+
 Document Type:
+
 <br>
-<b>Crime Chronology Report</b>
+
+<b>
+Crime Chronology Report
+</b>
+
 </p>
 
 
-<p>
+
+<p class="info">
+
 Contains chronological sequence of incidents and investigation timeline.
+
 </p>
+
 
 
 <a href="280816_BAB%20V.pdf" download>
 
-
 <button>
-⬇ Download BAB V
-</button>
 
+⬇ Download BAB V
+
+</button>
 
 </a>
 
 
+
 </div>
 
+
+
+
+
+
+
+
+<div class="footer">
+
+Gangnam Police Department © 2016
+
+<br>
+
+Digital Investigation Management System
+
+</div>
 
 
 
