@@ -1,0 +1,20 @@
+[
+  {
+    "scene_id": "SC-001",
+    "case_id": "GPD-2016-INS-001",
+    "victim": "Rico",
+    "condition": "Victim found in seated position with hands and legs restrained."
+  },
+  {
+    "scene_id": "SC-002",
+    "case_id": "GPD-2016-INS-001",
+    "victim": "Jeanne Jun",
+    "condition": "Crime scene showed similar pattern with previous case."
+  },
+  {
+    "scene_id": "SC-003",
+    "case_id": "GPD-2016-INS-001",
+    "victim": "Julian Lee",
+    "condition": "Similar murder method and evidence pattern identified."
+  }
+]
