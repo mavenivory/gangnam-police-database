@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digital Dead Drop | Recovered Protocol</title>
+<style>
+:root{--green:#69ff8d;--dark:#010503;--red:#ff6161}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--dark);color:var(--green);font-family:Consolas,"Courier New",monospace}body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:5;background:repeating-linear-gradient(0deg,rgba(0,0,0,.15) 0,rgba(0,0,0,.15) 1px,transparent 1px,transparent 4px);animation:scan 8s linear infinite}.top{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px 20px;border-bottom:1px solid #14532d;background:rgba(1,5,3,.96)}.actions{display:flex;gap:8px}.top button{padding:8px 11px;border:1px solid #22c55e;background:#041509;color:var(--green);font:inherit;cursor:pointer}.track{position:sticky;top:57px;z-index:3;height:4px;background:#071b0d}.bar{width:0;height:100%;background:var(--green);box-shadow:0 0 14px var(--green);transition:width .2s}.terminal{max-width:920px;margin:auto;padding:38px 24px 100px;line-height:1.65;text-shadow:0 0 8px rgba(34,197,94,.35)}h1{font-size:clamp(1.5rem,5vw,2.5rem);letter-spacing:.12em;animation:glitch .2s steps(2,end) 3}pre{margin:0;white-space:pre-wrap;word-break:break-word;font:inherit}.cursor{display:inline-block;animation:blink 1s steps(2,end) infinite}.offline{color:var(--red)}@keyframes blink{50%{opacity:0}}@keyframes glitch{50%{opacity:.35;transform:translateX(2px)}}@keyframes scan{from{transform:translateY(-12px)}to{transform:translateY(12px)}}@media(max-width:650px){.top{align-items:flex-start;flex-direction:column}.track{top:98px}.actions{width:100%}.top button{flex:1;font-size:.72rem}.terminal{padding-top:25px}}
+</style>
+</head>
+<body>
+<header class="top"><span id="status">RECOVERY SHELL // INITIALIZING...</span><div class="actions"><button id="skip">SKIP RECOVERY</button><button id="close">CLOSE SESSION</button></div></header>
+<div class="track"><div class="bar" id="bar"></div></div>
+<main class="terminal"><h1>DIGITAL DEAD DROP</h1><pre id="output"></pre><span class="cursor">█</span></main>
+<script>
+const recovered=String.raw`// RECOVERED PROTOCOL INITIATED
+
+FILE: ████████.enc
+STATUS: PARTIALLY RECOVERED
+INTEGRITY: 63.4%
+ORIGIN: UNKNOWN
+AUTHENTICATION: FAILED
+TRACE STATUS: UNRESOLVED
+ENCRYPTION: MULTI-LAYER
+LAST ACCESS: [PURGED]
+
+--------------------------------------------------
+[BEGIN FRAGMENT]
+
+DO NOT INDEX.
+DO NOT MIRROR.
+DO NOT ATTEMPT FULL RECOVERY.
+IF YOU CAN READ THIS, THE CONTAINMENT HAS ALREADY FAILED.
+
+--------------------------------------------------
+Searching...
+
+/root/████/archive/████
+/root/████/finance/████
+/root/████/████████
+
+Decrypting...
+
+SEARCH RESULT:
+1 ORGANIZATIONAL MATCH
+
+BLACK DAWN NETWORK
+Classification: UNVERIFIED / RESTRICTED
+
+No registered corporation.
+No government designation.
+No recognized headquarters.
+No confirmed jurisdiction.
+No centralized personnel registry.
+No official existence.
+
+And yet...
+[127 REFERENCES FOUND]
+
+--------------------------------------------------
+I. THE DAWN COUNCIL
+
+THE SEVENTH SEAT
+Identity: [WITHHELD]
+Location: [WITHHELD]
+Function: [WITHHELD]
+
+The designation appears across financial, operational,
+scientific, and intelligence records.
+No other seats were identified.
+No explanation for the designation "Seventh" was recovered.
+
+"There were never seven of them."
+"There were always seven."
+
+[CONFLICT DETECTED]
+
+--------------------------------------------------
+II. SUPREME COMMAND
+
+NYX
+Designation: Supreme Commander
+Legal Identity: UNKNOWN
+Location: UNKNOWN
+Biometric Record: NOT FOUND
+Direct Communication: NONE RECOVERED
+
+Nyx appears to exercise authority above the Executive Directorate.
+Every recovered order attributed to Nyx contains the same authentication mark:
+N-0
+
+No command bearing the designation has ever been traced
+to a physical location.
+
+--------------------------------------------------
+III. EXECUTIVE DIRECTORATE
+
+NODE_01 // EXECUTIVE DIRECTOR OF OPERATIONS
+Darius Khan
+FIELD OPERATIONS // INTELLIGENCE // SECURITY // ENFORCEMENT
+
+NODE_02 // EXECUTIVE DIRECTOR OF SCIENCE
+Dr. Katarina Weiss
+RESEARCH // EXPERIMENTATION // TECHNOLOGY
+
+NODE_03 // EXECUTIVE DIRECTOR OF FINANCE
+Marcus Leclerc
+ASSETS // FINANCIAL NETWORKS // CONCEALMENT
+
+NODE_04 // EXECUTIVE DIRECTOR OF RECRUITMENT & INFLUENCE
+Viktor Andrei
+RECRUITMENT // INFLUENCE // EXTERNAL NETWORKS
+
+--------------------------------------------------
+IV. NODE_03 // FINANCE
+
+EXECUTIVE DIRECTOR: Marcus Leclerc
+Financial operations are deliberately compartmentalized.
+No individual division possesses the complete financial picture.
+
+03-A // MONEY LAUNDERING OPERATIONS DIVISION
+Chief: Sebastian Volkov
+STATUS: ACTIVE
+
+03-B // SHELL CORPORATION NETWORK DIVISION
+Chief: Camille Dubois
+STATUS: ACTIVE
+
+03-C // CRYPTOCURRENCY & DIGITAL ASSETS DIVISION
+Chief: Nikolai Petrov
+STATUS: ACTIVE
+
+03-D // CASINO OPERATIONS DIVISION
+Chief: Evelyn Park
+STATUS: ACTIVE
+
+03-E // CHARITY & HUMANITARIAN FRONTS DIVISION
+Chief: Father Gabriel Moreau
+STATUS: ACTIVE
+
+KNOWN ASSOCIATED FRONTS:
+██████████████
+THE GRAND ORCHID BIENNALE
+██████████████
+
+FINANCIAL CLASSIFICATION:
+PHILANTHROPIC / CULTURAL / PRIVATE
+[ANOMALY DETECTED]
+
+03-F // OFFSHORE BANKING & INTERNATIONAL FINANCE DIVISION
+Chief: Helena Strauss
+STATUS: ACTIVE
+
+--------------------------------------------------
+[STRUCTURAL ANOMALY]
+
+The recovered hierarchy contains four Executive Directors.
+The financial directory contains six divisions.
+The operational directory contains twelve unidentified sub-nodes.
+The scientific directory contains no complete personnel list.
+The recruitment directory is inaccessible.
+The Dawn Council contains only one identified designation.
+
+Seventh Seat.
+
+[QUERY]
+WHO IS ABOVE NYX?                 NO RESULT
+WHO CREATED BDN?                 NO RESULT
+WHY SEVENTH?                     NO RESULT
+WHERE IS THE CENTRAL SERVER?     NO RESULT
+HOW MANY MEMBERS?                NO RESULT
+
+[SECONDARY QUERY]
+HOW MANY PEOPLE KNOW THE ENTIRE STRUCTURE?
+1
+...
+CORRECTION
+0
+
+--------------------------------------------------
+[UNAUTHORIZED INSERT DETECTED]
+SOURCE: UNKNOWN
+INTEGRITY: 91.2%
+THIS MESSAGE WAS NOT PART OF THE ORIGINAL FILE.
+
+--------------------------------------------------
+If you are reading this, then the dead drop worked.
+
+I am not asking you to stop.
+I am asking you to understand what you have found.
+
+I placed this file where you would find it because official
+channels are no longer safe. Every report I submitted was altered,
+buried, or redirected. Every person I trusted either disappeared,
+changed sides, or was made to look unreliable.
+
+The Black Dawn Network is real.
+
+It is not a rumor, a conspiracy theory, or an isolated criminal
+organization. It is a structure built to survive exposure.
+Its divisions are separated by design. Its members are given only
+the information they need to perform their function. Even those
+inside the organization may never see the whole picture.
+
+That is why I am giving it to you.
+
+I have spent years collecting fragments because no single document
+was ever allowed to exist. This file is incomplete, but it is enough
+to prove that the network reaches far beyond the people you have
+already encountered.
+
+Do not trust any institution that claims it has never heard of
+Black Dawn Network.
+Do not assume that silence means ignorance.
+
+Some of the people who deny its existence are protecting it.
+Some are afraid of it.
+Some do not even know they are serving it.
+
+I am not giving you this information so you can walk away.
+I am giving it to you because someone must draw the lines.
+
+If you are already inside the investigation, then you are already
+in danger. The only advantage you have left is knowing what you
+are looking at.
+
+[PAUSE: 04.72 SEC]
+
+There is something you should understand before you continue.
+THIS FILE IS NOT COMPLETE.
+It was never meant to be.
+
+Every time I recovered one section, another section vanished.
+Every time I identified a name, the corresponding record was altered.
+Every time I found a connection, someone had already severed it.
+
+That is why this file contains contradictions.
+Some are corruption.
+Some are lies.
+Some were deliberately planted.
+I no longer know which is which.
+
+--------------------------------------------------
+THE GRAND ORCHID BIENNALE
+
+You will probably think this is the important part.
+It isn't.
+Not by itself.
+
+Look at the names.
+Look at the money.
+Look at who appears before the transaction.
+Look at who disappears after it.
+
+The Biennale is not the network.
+It is a door.
+And doors are only useful if you know what is standing behind them.
+
+[DATA RECOVERY: 12%]
+████████████████
+RECOVERY ABORTED
+
+--------------------------------------------------
+ONE LAST THING
+
+If you found this file while investigating something else...
+keep investigating that something else.
+
+Do not change your direction.
+Do not announce what you found.
+Do not confront anyone whose name appears here.
+And do not assume that the person who gave you this information
+is on your side.
+
+You don't know me.
+You don't know why I did this.
+You don't know what I have already done to survive.
+
+Maybe I'm trying to expose them.
+Maybe I'm trying to destroy them.
+Maybe I'm only trying to make sure that if I disappear,
+someone remembers where to look.
+
+--------------------------------------------------
+[IDENTITY FRAGMENT RECOVERED]
+
+J
+████████████
+JEN
+████████████
+JENNIFER
+[MATCH: 87.3%]
+
+[IDENTITY CONFIRMED]
+JENNIFER
+
+If you're reading this, don't look for me.
+I've already been looking for you.
+
+--------------------------------------------------
+[FINAL DROP]
+
+THREE RULES
+01. EVERY NAME IS A MASK.
+02. EVERY RECORD IS A LIE.
+03. EVERY DOOR LEADS DEEPER.
+
+[UNKNOWN REFERENCE]
+
+[SYSTEM ERROR]
+REMOTE ACCESS DETECTED
+USER: █████████
+TRACE INITIATED
+
+03...
+02...
+01...
+
+TRACE FAILED
+
+[FINAL MESSAGE]
+They know someone found the file.
+They don't know who.
+Make sure it stays that way.
+
+[CONNECTION TERMINATED]
+
+--------------------------------------------------
+// DEAD DROP STATUS
+
+DELIVERED: YES
+RECIPIENT: UNKNOWN
+ORIGIN: UNKNOWN
+SOURCE ID: PURGED
+SELF-DESTRUCT: FAILED
+REMOTE WIPE: FAILED
+TRACEBACK: NULL
+
+END OF FILE`;
+const lines=recovered.split("\n"),output=document.getElementById("output"),bar=document.getElementById("bar"),status=document.getElementById("status"),skip=document.getElementById("skip");let index=0,timer;
+function finish(){clearInterval(timer);output.textContent=recovered;bar.style.width="100%";status.textContent="RECOVERY SHELL // PARTIAL FILE RESTORED // INTEGRITY 63.4%";skip.hidden=true;window.scrollTo(0,0)}
+function tick(){if(index>=lines.length){finish();return}output.textContent+=lines[index++]+"\n";bar.style.width=(index/lines.length*100)+"%";status.textContent=index<20?"RECOVERY SHELL // DECRYPTING ENCRYPTED SECTORS...":"RECOVERY SHELL // RECOVERED "+(index/lines.length*63.4).toFixed(1)+"% INTEGRITY";if(index<55)window.scrollTo(0,document.body.scrollHeight)}
+timer=setInterval(tick,42);
+skip.addEventListener("click",finish);
+document.getElementById("close").addEventListener("click",()=>{window.location.href="william-kim.html"});
+</script>
+</body></html>

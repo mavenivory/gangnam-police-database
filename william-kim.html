@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gangnam Police Department | William Kim Case Archive</title>
+<style>
+:root{--navy:#050914;--panel:#111827;--line:#334155;--gold:#fbbf24;--red:#dc2626;--muted:#cbd5e1;--green:#69ff8d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--navy);color:#fff;font-family:"Segoe UI",Arial,sans-serif}
+body.locked{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+.header{display:flex;align-items:center;gap:26px;padding:34px clamp(22px,6vw,70px);background:linear-gradient(135deg,#020617,#111827);border-bottom:3px solid #b91c1c}
+.logo{width:78px;height:78px;border-radius:50%;border:3px solid var(--gold);display:grid;place-items:center;background:#172554;font-size:34px}
+.header h1{margin:0;font-size:clamp(1.35rem,3vw,2rem);letter-spacing:.08em}
+.header p{margin:9px 0 0;color:var(--muted)}
+.badge{display:inline-block;margin-top:12px;padding:7px 15px;border-radius:999px;background:#7f1d1d;font-size:.72rem;font-weight:800;letter-spacing:.12em}
+.navbar{display:flex;gap:28px;flex-wrap:wrap;padding:16px clamp(22px,6vw,70px);background:#020617;border-bottom:1px solid #1e293b}
+.navbar a{color:var(--muted);font-weight:700}
+.navbar a:hover,.navbar a.active{color:var(--gold)}
+.container{max-width:1120px;margin:auto;padding:46px 28px 70px}
+.case-banner{padding:30px;border:1px solid #334155;border-left:5px solid #b91c1c;border-radius:14px;background:linear-gradient(135deg,#172554,#111827)}
+.eyebrow{color:var(--gold);font-size:.78rem;font-weight:900;letter-spacing:.18em}
+.case-banner h2{margin:12px 0 8px;font-size:clamp(1.8rem,5vw,3rem)}
+.case-banner p{color:var(--muted);line-height:1.7}
+.case-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.case-meta span{padding:7px 11px;border:1px solid #475569;border-radius:7px;background:#020617;color:#e2e8f0;font-size:.8rem}
+.section-title{margin:42px 0 20px;font-size:1.45rem}
+.document-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.document-card{display:flex;flex-direction:column;min-height:330px;padding:24px;border:1px solid #1e293b;border-radius:14px;background:var(--panel);transition:.25s}
+.document-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.file-icon{font-size:38px}
+.document-card h3{margin:16px 0 8px;color:var(--gold);font-size:1.08rem;line-height:1.4}
+.document-card p{color:var(--muted);line-height:1.65}
+.doc-id{font-size:.72rem;letter-spacing:.12em;color:#94a3b8}
+.access-button{margin-top:auto;padding:12px 14px;border-radius:7px;background:#b91c1c;text-align:center;font-size:.78rem;font-weight:900;letter-spacing:.08em}
+.access-button:hover{background:#dc2626}
+.overlay{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:20px;background:rgba(2,6,23,.96)}
+.overlay[hidden]{display:none}
+.gate{width:min(440px,100%);padding:36px;border:1px solid var(--line);border-radius:16px;background:#111827;box-shadow:0 25px 80px #000;text-align:center}
+.gate .lock{font-size:48px}
+.gate h2{margin:14px 0 5px;color:var(--gold);letter-spacing:.08em}
+.gate .layer{color:#94a3b8;font-size:.78rem;letter-spacing:.15em}
+.gate p{color:var(--muted);line-height:1.55}
+.gate input{width:100%;padding:14px;margin-top:12px;border:1px solid #475569;border-radius:8px;background:#020617;color:#fff;outline:none}
+.gate input:focus{border-color:var(--gold)}
+.gate button{width:100%;margin-top:12px;padding:13px;border:0;border-radius:8px;background:#b91c1c;color:#fff;font-weight:900;cursor:pointer}
+.gate button:hover{background:#dc2626}
+.message{min-height:20px;margin-top:12px;color:#fb7185!important;font-size:.82rem}
+.warning-card{position:relative;width:min(610px,100%);padding:42px 34px 34px;border:2px solid #ef4444;background:#170607;box-shadow:0 0 70px rgba(220,38,38,.35);text-align:center;cursor:pointer}
+.warning-card:hover{background:#21090b}
+.warning-card h2{margin:0;color:#ff5353;font-size:clamp(2rem,7vw,4rem);letter-spacing:.16em}
+.warning-card p{color:#fecaca;line-height:1.7}
+.warning-card .hint{font-size:.75rem;letter-spacing:.12em;color:#f87171}
+.close-warning{position:absolute;top:12px;right:14px;width:38px;height:38px;border:1px solid #ef4444;background:transparent;color:#fff;font-size:22px;cursor:pointer}
+.close-warning:hover{background:#ef4444}
+.secret-gate{border-color:#7f1d1d;background:#0b0507}
+.secret-gate h2{color:#fb7185}
+.terminal-overlay{position:fixed;inset:0;z-index:1200;overflow:auto;background:#010503;color:var(--green);font-family:Consolas,"Courier New",monospace}
+.terminal-overlay[hidden]{display:none}
+.terminal-overlay::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:4;background:repeating-linear-gradient(0deg,rgba(0,0,0,.12) 0,rgba(0,0,0,.12) 1px,transparent 1px,transparent 4px);animation:scan 8s linear infinite}
+.terminal-top{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid #14532d;background:rgba(1,5,3,.95);z-index:2}
+.terminal-actions{display:flex;gap:9px}.terminal-top button{border:1px solid #22c55e;background:#041509;color:var(--green);padding:8px 12px;cursor:pointer}
+.recovery-track{position:sticky;top:55px;z-index:3;height:4px;background:#071b0d}.recovery-bar{width:0;height:100%;background:var(--green);box-shadow:0 0 14px var(--green);transition:width .45s ease}
+.terminal{max-width:900px;margin:auto;padding:40px 24px 100px;line-height:1.65;text-shadow:0 0 8px rgba(34,197,94,.35)}
+.terminal h1{font-size:clamp(1.5rem,4vw,2.4rem);letter-spacing:.12em}
+.terminal .dim{color:#45a85d}.terminal .alert{color:#ff6161}.terminal .gold{color:#ffd166}
+.terminal hr{border:0;border-top:1px dashed #238636;margin:26px 0}
+.terminal pre{white-space:pre-wrap;word-break:break-word;font:inherit;margin:0}
+.terminal-chunk{opacity:0;transform:translateY(7px);filter:blur(2px);transition:opacity .45s ease,transform .45s ease,filter .45s ease}
+.terminal-chunk.revealed{opacity:1;transform:none;filter:none}
+.terminal-chunk.active{animation:signal .18s steps(2,end) 2}
+.blink{animation:blink 1s steps(2,end) infinite}@keyframes blink{50%{opacity:0}}
+@keyframes signal{50%{opacity:.35;transform:translateX(2px)}}
+@keyframes scan{from{transform:translateY(-12px)}to{transform:translateY(12px)}}
+@media(max-width:850px){.document-grid{grid-template-columns:1fr}.header{align-items:flex-start}.logo{flex:0 0 auto}.document-card{min-height:280px}}
+</style>
+</head>
+<body class="locked">
+<div class="overlay" id="case-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate">
+    <div class="lock">🔒</div>
+    <div class="layer" id="case-layer">SECONDARY ARCHIVE // LAYER 1 OF 2</div>
+    <h2 id="gate-title">WILLIAM KIM FILE</h2>
+    <p>Additional authorization is required to access the 2008 case archive.</p>
+    <form id="case-form">
+      <input id="case-password" type="password" autocomplete="off" aria-label="Case password" placeholder="ENTER ACCESS KEY" autofocus>
+      <button type="submit">AUTHENTICATE</button>
+    </form>
+    <p class="message" id="case-message" aria-live="polite"></p>
+  </div>
+</div>
+
+<header class="header">
+  <div class="logo">⚖</div>
+  <div>
+    <h1>GANGNAM POLICE DEPARTMENT</h1>
+    <p>Major Crime Investigation Division — Restricted Case Archive</p>
+    <span class="badge">CONFIDENTIAL // CASE YEAR 2008</span>
+  </div>
+</header>
+<nav class="navbar">
+  <a href="index.html">Mona Shin Case (2016)</a>
+  <a href="documents.html">2016 Document Archive</a>
+  <a class="active" href="william-kim.html">William Kim Case (2008)</a>
+</nav>
+
+<main class="container">
+  <section class="case-banner">
+    <div class="eyebrow">CASE FILE // GPD-2008-WKM-001</div>
+    <h2>The Murder of William Kim</h2>
+    <p>Authorized repository for the criminal trial transcript, post-mortem examination findings, and initial police report associated with the death of William Kim.</p>
+    <div class="case-meta">
+      <span>YEAR: 2008</span><span>TYPE: HOMICIDE</span><span>ACCESS: RESTRICTED</span><span>FILES: 03</span>
+    </div>
+  </section>
+
+  <h2 class="section-title">Classified Documents</h2>
+  <section class="document-grid">
+    <article class="document-card">
+      <div class="file-icon">📄</div>
+      <div class="doc-id">GPD-WKM-2008-01</div>
+      <h3>Criminal Trial Transcript</h3>
+      <p>Official transcript from the criminal proceedings concerning the murder of William Kim.</p>
+      <a class="access-button" href="TRANSKRIP%20SIDANG%20PIDANA%20PEMBUNUHAN%20WILLIAM%20KIM.pdf" target="_blank">OPEN PDF →</a>
+    </article>
+    <article class="document-card">
+      <div class="file-icon">📄</div>
+      <div class="doc-id">GPD-WKM-2008-02</div>
+      <h3>Post-Mortem Examination</h3>
+      <p>Forensic autopsy findings and medical examination record for William Kim.</p>
+      <a class="access-button" href="HASIL%20PEMERIKSAAN%20AUTOPSI.pdf" target="_blank">OPEN PDF →</a>
+    </article>
+    <article class="document-card">
+      <div class="file-icon">📄</div>
+      <div class="doc-id">GPD-WKM-2008-03</div>
+      <h3>Police Report</h3>
+      <p>Initial incident report, crime-scene record, investigative actions, and case status.</p>
+      <a class="access-button" href="LAPORAN%20POLISI.pdf" target="_blank">OPEN PDF →</a>
+    </article>
+  </section>
+</main>
+
+<div class="overlay" id="warning-overlay" hidden>
+  <div class="warning-card" id="warning-card" role="alertdialog" aria-modal="true" aria-labelledby="warning-title">
+    <button class="close-warning" id="close-warning" type="button" aria-label="Close warning">×</button>
+    <div class="eyebrow">UNVERIFIED DATA SIGNATURE DETECTED</div>
+    <h2 id="warning-title">WARNING</h2>
+    <p>A damaged encrypted fragment is attached to this archive. Interaction may initiate an unauthorized recovery protocol.</p>
+    <div class="hint">PRESS × TO DISMISS // INTERACT AT YOUR OWN RISK</div>
+  </div>
+</div>
+
+<div class="overlay" id="secret-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="secret-title">
+  <div class="gate secret-gate">
+    <div class="lock">⚠</div>
+    <div class="layer" id="secret-layer">DEAD DROP // LAYER 1 OF 2</div>
+    <h2 id="secret-title">RESTRICTED RECOVERY</h2>
+    <p>Unknown encrypted payload. Two additional credentials are required.</p>
+    <form id="secret-form">
+      <input id="secret-password" type="password" autocomplete="off" aria-label="Recovery password" placeholder="ENTER RECOVERY KEY">
+      <button type="submit">CONTINUE RECOVERY</button>
+    </form>
+    <p class="message" id="secret-message" aria-live="polite"></p>
+  </div>
+</div>
+
+<section class="terminal-overlay" id="terminal-overlay" hidden aria-label="Digital Dead Drop terminal">
+  <div class="terminal-top"><span id="recovery-status">RECOVERY SHELL // INITIALIZING...</span><div class="terminal-actions"><button id="skip-recovery" type="button">SKIP RECOVERY</button><button id="close-terminal" type="button">CLOSE SESSION</button></div></div>
+  <div class="recovery-track"><div class="recovery-bar" id="recovery-bar"></div></div>
+  <div class="terminal">
+    <h1>DIGITAL DEAD DROP</h1>
+    <pre><strong>// RECOVERED PROTOCOL INITIATED</strong>
+
+FILE: ████████.enc
+STATUS: PARTIALLY RECOVERED
+INTEGRITY: 63.4%
+ORIGIN: UNKNOWN
+AUTHENTICATION: FAILED
+TRACE STATUS: UNRESOLVED
+ENCRYPTION: MULTI-LAYER
+LAST ACCESS: [PURGED]</pre>
+    <hr>
+    <pre>[BEGIN FRAGMENT]
+
+<strong>DO NOT INDEX.
+DO NOT MIRROR.
+DO NOT ATTEMPT FULL RECOVERY.
+IF YOU CAN READ THIS, THE CONTAINMENT HAS ALREADY FAILED.</strong>
+
+Searching...
+
+/root/████/archive/████
+/root/████/finance/████
+/root/████/████████
+
+Decrypting...
+
+SEARCH RESULT:
+
+1 ORGANIZATIONAL MATCH
+
+<strong>BLACK DAWN NETWORK</strong>
+Classification: UNVERIFIED / RESTRICTED
+
+No registered corporation.
+No government designation.
+No recognized headquarters.
+No confirmed jurisdiction.
+No centralized personnel registry.
+No official existence.
+
+And yet...
+
+[127 REFERENCES FOUND]</pre>
+    <hr>
+    <pre><strong>I. THE DAWN COUNCIL
+
+THE SEVENTH SEAT</strong>
+
+Identity: [WITHHELD]
+Location: [WITHHELD]
+Function: [WITHHELD]
+
+The designation appears across financial, operational, scientific, and intelligence records.
+No other seats were identified.
+No explanation for the designation "Seventh" was recovered.
+
+One file contains a single sentence:
+"There were never seven of them."
+
+Another contains:
+"There were always seven."
+
+[CONFLICT DETECTED]</pre>
+    <hr>
+    <pre><strong>II. SUPREME COMMAND
+
+NYX</strong>
+Designation: Supreme Commander
+Legal Identity: UNKNOWN
+Location: UNKNOWN
+Biometric Record: NOT FOUND
+Direct Communication: NONE RECOVERED
+
+Nyx appears to exercise authority above the Executive Directorate.
+Every recovered order attributed to Nyx contains the same authentication mark:
+
+N-0
+
+No command bearing the designation has ever been traced to a physical location.</pre>
+    <hr>
+    <pre><strong>III. EXECUTIVE DIRECTORATE</strong>
+
+NODE_01 // EXECUTIVE DIRECTOR OF OPERATIONS
+<strong>Darius Khan</strong>
+FIELD OPERATIONS // INTELLIGENCE // SECURITY // ENFORCEMENT
+
+NODE_02 // EXECUTIVE DIRECTOR OF SCIENCE
+<strong>Dr. Katarina Weiss</strong>
+RESEARCH // EXPERIMENTATION // TECHNOLOGY
+
+NODE_03 // EXECUTIVE DIRECTOR OF FINANCE
+<strong>Marcus Leclerc</strong>
+ASSETS // FINANCIAL NETWORKS // CONCEALMENT
+
+NODE_04 // EXECUTIVE DIRECTOR OF RECRUITMENT &amp; INFLUENCE
+<strong>Viktor Andrei</strong>
+RECRUITMENT // INFLUENCE // EXTERNAL NETWORKS</pre>
+    <hr>
+    <pre><strong>IV. NODE_03 // FINANCE</strong>
+
+EXECUTIVE DIRECTOR: Marcus Leclerc
+Financial operations are deliberately compartmentalized.
+No individual division possesses the complete financial picture.
+
+03-A // MONEY LAUNDERING OPERATIONS DIVISION
+Chief: Sebastian Volkov // STATUS: ACTIVE
+
+03-B // SHELL CORPORATION NETWORK DIVISION
+Chief: Camille Dubois // STATUS: ACTIVE
+
+03-C // CRYPTOCURRENCY &amp; DIGITAL ASSETS DIVISION
+Chief: Nikolai Petrov // STATUS: ACTIVE
+
+03-D // CASINO OPERATIONS DIVISION
+Chief: Evelyn Park // STATUS: ACTIVE
+
+03-E // CHARITY &amp; HUMANITARIAN FRONTS DIVISION
+Chief: Father Gabriel Moreau // STATUS: ACTIVE
+KNOWN ASSOCIATED FRONTS:
+██████████████
+THE GRAND ORCHID BIENNALE
+██████████████
+FINANCIAL CLASSIFICATION: PHILANTHROPIC / CULTURAL / PRIVATE
+[ANOMALY DETECTED]
+
+03-F // OFFSHORE BANKING &amp; INTERNATIONAL FINANCE DIVISION
+Chief: Helena Strauss // STATUS: ACTIVE</pre>
+    <hr>
+    <pre>[STRUCTURAL ANOMALY]
+
+The recovered hierarchy contains four Executive Directors.
+The financial directory contains six divisions.
+The operational directory contains twelve unidentified sub-nodes.
+The scientific directory contains no complete personnel list.
+The recruitment directory is inaccessible.
+The Dawn Council contains only one identified designation.
+
+<strong>Seventh Seat.</strong>
+
+[QUERY]
+WHO IS ABOVE NYX?                 NO RESULT
+WHO CREATED BDN?                 NO RESULT
+WHY SEVENTH?                     NO RESULT
+WHERE IS THE CENTRAL SERVER?     NO RESULT
+HOW MANY MEMBERS?                NO RESULT
+
+[SECONDARY QUERY]
+HOW MANY PEOPLE KNOW THE ENTIRE STRUCTURE?
+1
+...
+CORRECTION
+0</pre>
+    <hr>
+    <pre class="alert">[UNAUTHORIZED INSERT DETECTED]
+SOURCE: UNKNOWN
+INTEGRITY: 91.2%
+THIS MESSAGE WAS NOT PART OF THE ORIGINAL FILE.</pre>
+    <hr>
+    <pre>If you are reading this, then the dead drop worked.
+
+I am not asking you to stop.
+I am asking you to understand what you have found.
+
+I placed this file where you would find it because official channels are no longer safe. Every report I submitted was altered, buried, or redirected. Every person I trusted either disappeared, changed sides, or was made to look unreliable.
+
+The Black Dawn Network is real.
+
+It is not a rumor, a conspiracy theory, or an isolated criminal organization. It is a structure built to survive exposure. Its divisions are separated by design. Its members are given only the information they need to perform their function. Even those inside the organization may never see the whole picture.
+
+That is why I am giving it to you.
+
+I have spent years collecting fragments because no single document was ever allowed to exist. This file is incomplete, but it is enough to prove that the network reaches far beyond the people you have already encountered.
+
+Do not trust any institution that claims it has never heard of Black Dawn Network.
+Do not assume that silence means ignorance.
+
+Some of the people who deny its existence are protecting it.
+Some are afraid of it.
+Some do not even know they are serving it.
+
+I am not giving you this information so you can walk away.
+I am giving it to you because someone must draw the lines.
+
+If you are already inside the investigation, then you are already in danger. The only advantage you have left is knowing what you are looking at.
+
+[PAUSE: 04.72 SEC]
+
+There is something you should understand before you continue.
+
+<strong>This file is not complete.</strong>
+
+It was never meant to be.
+
+Every time I recovered one section, another section vanished.
+Every time I identified a name, the corresponding record was altered.
+Every time I found a connection, someone had already severed it.
+
+That is why this file contains contradictions.
+Some are corruption.
+Some are lies.
+Some were deliberately planted.
+I no longer know which is which.</pre>
+    <hr>
+    <pre><strong>THE GRAND ORCHID BIENNALE</strong>
+
+You will probably think this is the important part.
+It isn't.
+Not by itself.
+
+Look at the names.
+Look at the money.
+Look at who appears before the transaction.
+Look at who disappears after it.
+
+The Biennale is not the network.
+It is a <strong>door</strong>.
+And doors are only useful if you know what is standing behind them.
+
+[DATA RECOVERY: 12%]
+████████████████
+RECOVERY ABORTED</pre>
+    <hr>
+    <pre><strong>ONE LAST THING</strong>
+
+If you found this file while investigating something else...
+<strong>keep investigating that something else.</strong>
+
+Do not change your direction.
+Do not announce what you found.
+Do not confront anyone whose name appears here.
+And do not assume that the person who gave you this information is on your side.
+
+You don't know me.
+You don't know why I did this.
+You don't know what I have already done to survive.
+
+Maybe I'm trying to expose them.
+Maybe I'm trying to destroy them.
+Maybe I'm only trying to make sure that if I disappear, someone remembers where to look.</pre>
+    <hr>
+    <pre>[IDENTITY FRAGMENT RECOVERED]
+
+J
+████████████
+JEN
+████████████
+JENNIFER
+[MATCH: 87.3%]
+
+[IDENTITY CONFIRMED]
+<strong>JENNIFER</strong>
+
+If you're reading this, don't look for me.
+<strong>I've already been looking for you.</strong></pre>
+    <hr>
+    <pre><strong>[FINAL DROP]
+
+THREE RULES
+
+01. EVERY NAME IS A MASK.
+02. EVERY RECORD IS A LIE.
+03. EVERY DOOR LEADS DEEPER.</strong>
+
+[UNKNOWN REFERENCE]
+
+[SYSTEM ERROR]
+REMOTE ACCESS DETECTED
+USER: █████████
+TRACE INITIATED
+
+03...
+02...
+01...
+
+TRACE FAILED
+
+[FINAL MESSAGE]
+<strong>They know someone found the file.
+They don't know who.
+Make sure it stays that way.</strong>
+
+[CONNECTION TERMINATED]</pre>
+    <hr>
+    <pre>// DEAD DROP STATUS
+
+DELIVERED: YES
+RECIPIENT: UNKNOWN
+ORIGIN: UNKNOWN
+SOURCE ID: PURGED
+SELF-DESTRUCT: FAILED
+REMOTE WIPE: FAILED
+TRACEBACK: NULL
+
+<strong>END OF FILE</strong>
+<span class="blink">█</span></pre>
+  </div>
+</section>
+
+<script>
+const caseGate=document.getElementById("case-gate");
+const caseForm=document.getElementById("case-form");
+const casePassword=document.getElementById("case-password");
+const caseLayer=document.getElementById("case-layer");
+const caseMessage=document.getElementById("case-message");
+const warningOverlay=document.getElementById("warning-overlay");
+const warningCard=document.getElementById("warning-card");
+const closeWarning=document.getElementById("close-warning");
+const secretOverlay=document.getElementById("secret-overlay");
+const secretForm=document.getElementById("secret-form");
+const secretPassword=document.getElementById("secret-password");
+const secretLayer=document.getElementById("secret-layer");
+const secretMessage=document.getElementById("secret-message");
+const terminalOverlay=document.getElementById("terminal-overlay");
+const closeTerminal=document.getElementById("close-terminal");
+const skipRecovery=document.getElementById("skip-recovery");
+const recoveryBar=document.getElementById("recovery-bar");
+const recoveryStatus=document.getElementById("recovery-status");
+let caseStep=0;
+let secretStep=0;
+let recoveryTimers=[];
+
+function stopRecoveryTimers(){
+  recoveryTimers.forEach(clearTimeout);
+  recoveryTimers=[];
+}
+
+function revealAllRecovery(){
+  stopRecoveryTimers();
+  document.querySelectorAll(".terminal-chunk").forEach(chunk=>chunk.classList.add("revealed"));
+  recoveryBar.style.width="100%";
+  recoveryStatus.textContent="RECOVERY SHELL // PARTIAL FILE RESTORED // INTEGRITY 63.4%";
+  skipRecovery.hidden=true;
+}
+
+function startRecoveryAnimation(){
+  stopRecoveryTimers();
+  const chunks=[...document.querySelectorAll(".terminal > h1, .terminal > pre, .terminal > hr")];
+  chunks.forEach(chunk=>{
+    chunk.classList.add("terminal-chunk");
+    chunk.classList.remove("revealed","active");
+  });
+  recoveryBar.style.width="0%";
+  recoveryStatus.textContent="RECOVERY SHELL // SEARCHING ENCRYPTED SECTORS...";
+  skipRecovery.hidden=false;
+  chunks.forEach((chunk,index)=>{
+    recoveryTimers.push(setTimeout(()=>{
+      chunk.classList.add("revealed","active");
+      const percent=Math.round(((index+1)/chunks.length)*63.4*10)/10;
+      recoveryBar.style.width=((index+1)/chunks.length*100)+"%";
+      if(index<3) recoveryStatus.textContent="RECOVERY SHELL // DECRYPTING FRAGMENT "+String(index+1).padStart(2,"0");
+      else recoveryStatus.textContent="RECOVERY SHELL // RECOVERED "+percent+"% INTEGRITY";
+      setTimeout(()=>chunk.classList.remove("active"),450);
+      if(index===chunks.length-1){
+        recoveryStatus.textContent="RECOVERY SHELL // PARTIAL FILE RESTORED // INTEGRITY 63.4%";
+        skipRecovery.hidden=true;
+      }
+    },250+index*650));
+  });
+}
+
+caseForm.addEventListener("submit",event=>{
+  event.preventDefault();
+  const expected=caseStep===0?"ardenter":"vainglory";
+  if(casePassword.value!==expected){
+    caseMessage.textContent="ACCESS DENIED — INVALID CREDENTIAL";
+    casePassword.value="";
+    casePassword.focus();
+    return;
+  }
+  caseStep++;
+  casePassword.value="";
+  caseMessage.textContent="CREDENTIAL ACCEPTED";
+  if(caseStep===1){
+    caseLayer.textContent="SECONDARY ARCHIVE // LAYER 2 OF 2";
+    casePassword.placeholder="ENTER SECOND ACCESS KEY";
+    casePassword.focus();
+    return;
+  }
+  caseGate.hidden=true;
+  warningOverlay.hidden=false;
+});
+
+closeWarning.addEventListener("click",event=>{
+  event.stopPropagation();
+  warningOverlay.hidden=true;
+  document.body.classList.remove("locked");
+});
+
+warningOverlay.addEventListener("click",()=>{
+  warningOverlay.hidden=true;
+  secretOverlay.hidden=false;
+  secretPassword.focus();
+});
+
+secretForm.addEventListener("submit",event=>{
+  event.preventDefault();
+  const expected=secretStep===0?"acedia":"goddessofnight";
+  if(secretPassword.value!==expected){
+    secretMessage.textContent="RECOVERY REJECTED — INVALID KEY";
+    secretPassword.value="";
+    secretPassword.focus();
+    return;
+  }
+  secretStep++;
+  secretPassword.value="";
+  secretMessage.textContent="RECOVERY KEY ACCEPTED";
+  if(secretStep===1){
+    secretLayer.textContent="DEAD DROP // LAYER 2 OF 2";
+    secretPassword.placeholder="ENTER FINAL RECOVERY KEY";
+    secretPassword.focus();
+    return;
+  }
+  secretOverlay.hidden=true;
+  terminalOverlay.hidden=false;
+  document.body.classList.add("locked");
+  terminalOverlay.scrollTop=0;
+  startRecoveryAnimation();
+});
+
+closeTerminal.addEventListener("click",()=>{
+  stopRecoveryTimers();
+  terminalOverlay.hidden=true;
+  document.body.classList.remove("locked");
+});
+
+skipRecovery.addEventListener("click",revealAllRecovery);
+</script>
+</body>
+</html>
